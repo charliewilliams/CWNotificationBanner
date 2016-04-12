@@ -94,11 +94,12 @@ public class PopDownOverlayBar: UIToolbar {
         pendingMessages = []
     }
 
-    @IBOutlet private weak var cancelButton: UIBarButtonItem!
     @IBOutlet private weak var messageLabel: UILabel!
     public static var sharedToolbar: PopDownOverlayBar = {
         let keyWindow = UIApplication.sharedApplication().keyWindow!
         let t = NSBundle.mainBundle().loadNibNamed(String(PopDownOverlayBar), owner: nil, options: nil).first as! PopDownOverlayBar
+        t.hideHairlineBorder()
+        t.barTintColor = UIColor(white: 0.2, alpha: 0.4)
         keyWindow.addSubview(t)
         return t
     }()
@@ -108,10 +109,11 @@ public class PopDownOverlayBar: UIToolbar {
     private static var pendingMessages = [Message]()
     
     private static let animateDuration: NSTimeInterval = 0.3
-    private static var messageShownFrame: CGRect {
-        return CGRect(x: 0, y: 0, width: sharedToolbar.frame.width, height: sharedToolbar.frame.height)
+    private class var messageShownFrame: CGRect {
+        let y = UIApplication.sharedApplication().statusBarHidden ? 0 : UIApplication.sharedApplication().statusBarFrame.height
+        return CGRect(x: 0, y: y, width: sharedToolbar.frame.width, height: sharedToolbar.frame.height)
     }
-    private static var messageHiddenFrame: CGRect {
+    private class var messageHiddenFrame: CGRect {
         return CGRect(x: 0, y: -sharedToolbar.frame.height, width: sharedToolbar.frame.width, height: sharedToolbar.frame.height)
     }
     
@@ -149,6 +151,14 @@ public class PopDownOverlayBar: UIToolbar {
         PopDownOverlayBar.hideCurrentMessage(true) {
             if let next = PopDownOverlayBar.pendingMessages.last {
                 PopDownOverlayBar.showMessage(next)
+            }
+        }
+    }
+    
+    private func hideHairlineBorder() {
+        for view in subviews {
+            if let imageView = view as? UIImageView {
+                imageView.hidden = true
             }
         }
     }
