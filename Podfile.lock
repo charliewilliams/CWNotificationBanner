@@ -1,0 +1,10 @@
+PODS:
+  - SwiftyTimer (1.4.0)
+
+DEPENDENCIES:
+  - SwiftyTimer
+
+SPEC CHECKSUMS:
+  SwiftyTimer: db4458cfaf67fc71e16ad6e4637c60b86f76a649
+
+COCOAPODS: 0.39.0
