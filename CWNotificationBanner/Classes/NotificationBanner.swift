@@ -20,12 +20,24 @@ public struct Message : Equatable {
     public let action: Action?
     public let duration: NSTimeInterval
     private let date: NSDate
+    private static let defaultDisplayTime: NSTimeInterval = 5
     
-    public init(text: String, action: Action? = nil, displayDuration: NSTimeInterval = 5) {
+    public init(text: String, action: Action? = nil, displayDuration: NSTimeInterval = defaultDisplayTime) {
         self.text = text
         self.action = action
         self.date = NSDate()
         self.duration = displayDuration
+    }
+    
+    public init?(pushPayload: [NSObject : AnyObject]) {
+        
+        guard let text = pushPayload["aps"]?["alert"] as? String else { return nil }
+        self.text = text
+        
+        // TODO add support for actions
+        self.action = {}
+        self.duration = pushPayload["d"] as? NSTimeInterval ?? Message.defaultDisplayTime
+        self.date = NSDate()
     }
     
     public func isEqual(other: AnyObject?) -> Bool {
@@ -98,12 +110,12 @@ public class NotificationBanner: UIToolbar {
 
     @IBOutlet private weak var messageLabel: UILabel!
     public static var sharedToolbar: NotificationBanner = {
-        let keyWindow = UIApplication.sharedApplication().keyWindow!
         let bundle = NSBundle(forClass: NotificationBanner.classForCoder())
         let t = bundle.loadNibNamed(String(NotificationBanner), owner: nil, options: nil).first as! NotificationBanner
         t.hideHairlineBorder()
         t.barTintColor = UIColor(white: 0.2, alpha: 0.4)
-        keyWindow.addSubview(t)
+        t.addStatusBarBackingView()
+        UIApplication.sharedApplication().keyWindow!.addSubview(t)
         return t
     }()
     
@@ -164,5 +176,15 @@ public class NotificationBanner: UIToolbar {
                 imageView.hidden = true
             }
         }
+    }
+    
+    private func addStatusBarBackingView() {
+        let underStatusBar = UIView(frame: CGRectZero)
+        underStatusBar.backgroundColor = UIColor(white: 0.2, alpha: 0.85)
+        underStatusBar.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(underStatusBar)
+        let views = ["underStatusBar":underStatusBar]
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[underStatusBar]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(-20)-[underStatusBar(20)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
     }
 }
