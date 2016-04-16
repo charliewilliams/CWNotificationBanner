@@ -5,17 +5,30 @@ You want a nice iOS Push Notification UI to display popover banners? Here it is.
 - Supports cancelling individual message or all of them at once.
 
 ```swift
-let message = Message("You have an alert")
-NotificationBanner.showMessage(message)
 
-let message = Message("You have an alert", displayDuration: 2)
-NotificationBanner.showMessage(message)
+import CWNotificationBanner
 
-NotificationBanner.cancelMessage(message, animated: false)
-NotificationBanner.cancelAllMessages()
+override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+
+    let message = Message(text: "You have an alert")
+    NotificationBanner.showMessage(message)
+
+    let message = Message("You have an alert", displayDuration: 2)
+    NotificationBanner.showMessage(message)
+
+}
+
+override func viewWillDisappear() {
+    super.viewWillDisappear()
+
+    NotificationBanner.cancelMessage(message, animated: false)
+    NotificationBanner.cancelAllMessages()
+}
+
 ```
 
-Swift 2.0 re-interpretation of AGPushNote (https://github.com/avielg/AGPushNote).
+CWNotificationBanner is a Swift 2.0 re-interpretation of AGPushNote (https://github.com/avielg/AGPushNote).
 
 Future improvements:
 - Implement actions for when you tap a message (This is hindered somewhat by the rigorous #selector checks in Swift)
