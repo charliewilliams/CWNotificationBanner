@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'CWNotificationBanner_Example', :exclusive => true do
+  pod 'CWNotificationBanner', :path => '../'
+end
+
+target 'CWNotificationBanner_Tests', :exclusive => true do
+  pod 'CWNotificationBanner', :path => '../'
+
+  pod 'FBSnapshotTestCase'
+end
