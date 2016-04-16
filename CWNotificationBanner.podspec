@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = "CWNotificationBanner"
   s.version          = "0.1.0"
-  s.summary          = "A short description of CWNotificationBanner."
+  s.summary          = "You want a nice iOS Push Notification UI to display popover banners? Here it is."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,14 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
+        CWNotificationBanner provides an easy way to mimic the iOS push notification UI while your app is active.
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/CWNotificationBanner"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
+  s.homepage         = "https://github.com/charliewilliams/CWNotificationBanner"
+  # s.screenshots    = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Charlie Williams" => "c@charliewilliams.org" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/CWNotificationBanner.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => "https://github.com/charliewilliams/CWNotificationBanner.git", :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/buildsucceeded'
 
   s.ios.deployment_target = '8.0'
 
@@ -35,6 +36,6 @@ Pod::Spec.new do |s|
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # s.frameworks = 'UIKit'
+  # s.dependency 'SwiftyTimer', '~> 1.4'
 end

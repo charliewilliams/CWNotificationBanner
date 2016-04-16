@@ -1,0 +1,6 @@
+framework module CWNotificationBanner {
+  umbrella header "CWNotificationBanner-umbrella.h"
+
+  export *
+  module * { export * }
+}

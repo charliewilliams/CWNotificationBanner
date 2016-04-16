@@ -1,11 +1,13 @@
+
+platform :ios, '8.0'
 use_frameworks!
 
-target 'CWNotificationBanner_Example', :exclusive => true do
-  pod 'CWNotificationBanner', :path => '../'
+target 'CWNotificationBanner_Example' do
+    pod 'SwiftyTimer', '~> 1.4'
+    pod 'CWNotificationBanner', :path => '../'
 end
 
 target 'CWNotificationBanner_Tests', :exclusive => true do
-  pod 'CWNotificationBanner', :path => '../'
-
-  pod 'FBSnapshotTestCase'
+    pod 'CWNotificationBanner', :path => '../'
+    pod 'FBSnapshotTestCase'
 end
