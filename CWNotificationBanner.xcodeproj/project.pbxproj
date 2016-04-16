@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7F15C0F6A984CC66B561A5C6 /* Pods_CWNotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0A5512192DF4B96199E75C1 /* Pods_CWNotificationBanner.framework */; };
-		C00638501CBD0F4D00BF3F77 /* PopDownOverlayBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = C006384F1CBD0F4D00BF3F77 /* PopDownOverlayBar.xib */; };
+		C00638501CBD0F4D00BF3F77 /* NotificationBanner.xib in Resources */ = {isa = PBXBuildFile; fileRef = C006384F1CBD0F4D00BF3F77 /* NotificationBanner.xib */; };
 		C082A0E41CBCE82800E7745A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082A0E31CBCE82800E7745A /* AppDelegate.swift */; };
 		C082A0E61CBCE82800E7745A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082A0E51CBCE82800E7745A /* ViewController.swift */; };
 		C082A0E91CBCE82800E7745A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C082A0E71CBCE82800E7745A /* Main.storyboard */; };
 		C082A0EB1CBCE82800E7745A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C082A0EA1CBCE82800E7745A /* Assets.xcassets */; };
 		C082A0EE1CBCE82800E7745A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C082A0EC1CBCE82800E7745A /* LaunchScreen.storyboard */; };
 		C082A0F91CBCE82800E7745A /* CWNotificationBannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082A0F81CBCE82800E7745A /* CWNotificationBannerTests.swift */; };
-		C082A1041CBCE85800E7745A /* PopDownOverlayBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082A1031CBCE85800E7745A /* PopDownOverlayBar.swift */; };
+		C082A1041CBCE85800E7745A /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = C082A1031CBCE85800E7745A /* NotificationBanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,7 @@
 
 /* Begin PBXFileReference section */
 		891863354AADF1A1C2C43099 /* Pods-CWNotificationBanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner/Pods-CWNotificationBanner.release.xcconfig"; sourceTree = "<group>"; };
-		C006384F1CBD0F4D00BF3F77 /* PopDownOverlayBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopDownOverlayBar.xib; sourceTree = "<group>"; };
+		C006384F1CBD0F4D00BF3F77 /* NotificationBanner.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationBanner.xib; sourceTree = "<group>"; };
 		C082A0E01CBCE82800E7745A /* CWNotificationBanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CWNotificationBanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C082A0E31CBCE82800E7745A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C082A0E51CBCE82800E7745A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,7 +41,7 @@
 		C082A0F41CBCE82800E7745A /* CWNotificationBannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWNotificationBannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C082A0F81CBCE82800E7745A /* CWNotificationBannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CWNotificationBannerTests.swift; sourceTree = "<group>"; };
 		C082A0FA1CBCE82800E7745A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C082A1031CBCE85800E7745A /* PopDownOverlayBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopDownOverlayBar.swift; sourceTree = "<group>"; };
+		C082A1031CBCE85800E7745A /* NotificationBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
 		E0A5512192DF4B96199E75C1 /* Pods_CWNotificationBanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWNotificationBanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2E4B848DD1C81148BCBF5E7 /* Pods-CWNotificationBanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner/Pods-CWNotificationBanner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,8 +107,8 @@
 			children = (
 				C082A0E31CBCE82800E7745A /* AppDelegate.swift */,
 				C082A0E51CBCE82800E7745A /* ViewController.swift */,
-				C082A1031CBCE85800E7745A /* PopDownOverlayBar.swift */,
-				C006384F1CBD0F4D00BF3F77 /* PopDownOverlayBar.xib */,
+				C082A1031CBCE85800E7745A /* NotificationBanner.swift */,
+				C006384F1CBD0F4D00BF3F77 /* NotificationBanner.xib */,
 				C082A0E71CBCE82800E7745A /* Main.storyboard */,
 				C082A0EA1CBCE82800E7745A /* Assets.xcassets */,
 				C082A0EC1CBCE82800E7745A /* LaunchScreen.storyboard */,
@@ -210,7 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C00638501CBD0F4D00BF3F77 /* PopDownOverlayBar.xib in Resources */,
+				C00638501CBD0F4D00BF3F77 /* NotificationBanner.xib in Resources */,
 				C082A0EE1CBCE82800E7745A /* LaunchScreen.storyboard in Resources */,
 				C082A0EB1CBCE82800E7745A /* Assets.xcassets in Resources */,
 				C082A0E91CBCE82800E7745A /* Main.storyboard in Resources */,
@@ -279,7 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C082A1041CBCE85800E7745A /* PopDownOverlayBar.swift in Sources */,
+				C082A1041CBCE85800E7745A /* NotificationBanner.swift in Sources */,
 				C082A0E61CBCE82800E7745A /* ViewController.swift in Sources */,
 				C082A0E41CBCE82800E7745A /* AppDelegate.swift in Sources */,
 			);

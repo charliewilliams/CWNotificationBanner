@@ -1,5 +1,5 @@
 //
-//  PopDownOverlayBar.swift
+//  NotificationBanner.swift
 //  CWNotificationBanner
 //
 //  Created by Charlie Williams on 12/04/2016.
@@ -32,7 +32,7 @@ public struct Message : Equatable {
     }
 }
 
-public class PopDownOverlayBar: UIToolbar {
+public class NotificationBanner: UIToolbar {
 
     public static func showMessage(message: Message) {
         
@@ -95,9 +95,9 @@ public class PopDownOverlayBar: UIToolbar {
     }
 
     @IBOutlet private weak var messageLabel: UILabel!
-    public static var sharedToolbar: PopDownOverlayBar = {
+    public static var sharedToolbar: NotificationBanner = {
         let keyWindow = UIApplication.sharedApplication().keyWindow!
-        let t = NSBundle.mainBundle().loadNibNamed(String(PopDownOverlayBar), owner: nil, options: nil).first as! PopDownOverlayBar
+        let t = NSBundle.mainBundle().loadNibNamed(String(NotificationBanner), owner: nil, options: nil).first as! NotificationBanner
         t.hideHairlineBorder()
         t.barTintColor = UIColor(white: 0.2, alpha: 0.4)
         keyWindow.addSubview(t)
@@ -144,13 +144,13 @@ public class PopDownOverlayBar: UIToolbar {
     }
 
     @IBAction func popoverTapped(sender: UIBarButtonItem) {
-        PopDownOverlayBar.currentMessage?.action()
+        NotificationBanner.currentMessage?.action()
     }
     
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
-        PopDownOverlayBar.hideCurrentMessage(true) {
-            if let next = PopDownOverlayBar.pendingMessages.last {
-                PopDownOverlayBar.showMessage(next)
+        NotificationBanner.hideCurrentMessage(true) {
+            if let next = NotificationBanner.pendingMessages.last {
+                NotificationBanner.showMessage(next)
             }
         }
     }

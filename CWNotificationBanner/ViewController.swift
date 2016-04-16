@@ -17,7 +17,7 @@ class ViewController: UIViewController {
             
         })
         
-        PopDownOverlayBar.showMessage(message)
+        NotificationBanner.showMessage(message)
     }
     
     var count: Int = 0
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
             
         })
         
-        PopDownOverlayBar.showMessage(message)
+        NotificationBanner.showMessage(message)
         
         count += 1
     }
