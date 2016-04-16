@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Charlie Williams" => "c@charliewilliams.org" }
   s.source           = { :git => "https://github.com/charliewilliams/CWNotificationBanner.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/buildsucceeded'
+  s.social_media_url = 'https://twitter.com/buildsucceeded'
 
   s.ios.deployment_target = '8.0'
 
@@ -36,6 +36,6 @@ Pod::Spec.new do |s|
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit'
-  # s.dependency 'SwiftyTimer', '~> 1.4'
+  s.frameworks = 'UIKit'
+  s.dependency 'SwiftyTimer', '~> 1.4'
 end
