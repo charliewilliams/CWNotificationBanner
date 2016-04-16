@@ -13,13 +13,15 @@ public func ==(lhs: Message, rhs: Message) -> Bool {
     return lhs.text == rhs.text && lhs.date == rhs.date
 }
 
+public typealias Action = (() -> ())
+
 public struct Message : Equatable {
     public let text: String
-    public let action: () -> ()
+    public let action: Action?
     public let duration: NSTimeInterval
     private let date: NSDate
     
-    public init(text: String, action: () -> (), displayDuration: NSTimeInterval = 5) {
+    public init(text: String, action: Action? = nil, displayDuration: NSTimeInterval = 5) {
         self.text = text
         self.action = action
         self.date = NSDate()
@@ -144,7 +146,7 @@ public class NotificationBanner: UIToolbar {
     }
 
     @IBAction func popoverTapped(sender: UIBarButtonItem) {
-        NotificationBanner.currentMessage?.action()
+        NotificationBanner.currentMessage?.action?()
     }
     
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
