@@ -2,7 +2,7 @@ PODS:
   - SwiftyTimer (1.4.0)
 
 DEPENDENCIES:
-  - SwiftyTimer
+  - SwiftyTimer (~> 1.4)
 
 SPEC CHECKSUMS:
   SwiftyTimer: db4458cfaf67fc71e16ad6e4637c60b86f76a649

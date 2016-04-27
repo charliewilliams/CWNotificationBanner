@@ -1,13 +1,14 @@
 
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '8.0'
 use_frameworks!
+
+target 'CWNotificationBanner' do
+    pod 'SwiftyTimer', '~> 1.4'
+end
 
 target 'CWNotificationBanner_Example' do
     pod 'SwiftyTimer', '~> 1.4'
     pod 'CWNotificationBanner', :path => '../'
-end
-
-target 'CWNotificationBanner_Tests', :exclusive => true do
-    pod 'CWNotificationBanner', :path => '../'
-    pod 'FBSnapshotTestCase'
 end

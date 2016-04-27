@@ -1,1219 +1,3115 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		01C37A59806E6227E2E2F36B34FB6622 /* CWNotificationBanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3D742F569D0DBD2B2413172384E500 /* CWNotificationBanner-dummy.m */; };
-		04A6773875E420B994FD70378F132CE5 /* CWNotificationBanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A7219AD1D834D15213EF3C8BF06ED72 /* CWNotificationBanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		05CFACAC73DC4E715804125973E5F13A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */; };
-		125E9AB8D9F3FA41A578627E57C1B37A /* UIApplication+StrictKeyWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 3447BFD8C21EECB937449FD8A2B8A8AE /* UIApplication+StrictKeyWindow.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2696638529960E774A76D99A13D595BB /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F3FFC2EAC53BFF5D6DA0276B7E799D2 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D35AEE7A0E4C197A5BC1E3A01C0D2D7 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E64A8AC222F14641EB6D09879F890C7D /* SwiftyTimer.swift */; };
-		2DB37220AC01109263246373B69A4992 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */; };
-		3C18F29E03CADC58B278518F22B7B517 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0528444EFC68619AD1FEB8A7CD4A01BA /* QuartzCore.framework */; };
-		3C85E62EBD0D660C3DB557FABF9B8E10 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EEFA97DF70FC20CBB62E03ED784AE25 /* UIImage+Diff.m */; };
-		3FF33EF2BEA328811C6BC7C97A9776A3 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 560258049DC5AF90D11617CA36E757D9 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		404FB4530B0302D64445D8784182D6C3 /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A24A4C396A8739C6F2D6868BB84C97C /* NotificationBanner.swift */; };
-		47F4252DEFDE1FD558C94B874F716335 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */; };
-		481B8A32E321CD50722619DF22B8BB2A /* CWNotificationBanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2153E251CEF18C444CD59581461E7538 /* CWNotificationBanner.bundle */; };
-		500CFFB619BA25FB57B6AF48F8CCD8F3 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = AD768CFDAA33EBB55AC6458FF3609B71 /* UIImage+Compare.m */; };
-		5406C486E33BDA850F4FCC715FEC0D70 /* Pods-CWNotificationBanner_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BCA43065608857CCEC7FA9C17ACA48 /* Pods-CWNotificationBanner_Example-dummy.m */; };
-		57F1C848B1FF345095A47F843CFDC70D /* NotificationBanner.xib in Sources */ = {isa = PBXBuildFile; fileRef = 4371E482706A1A95819CB27D32427A54 /* NotificationBanner.xib */; };
-		58CA52BCED9F6E2A9CCE4DF19E873D3E /* FBSnapshotTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7DB1EB61CE55B124EB1251200D826D4 /* FBSnapshotTestController.m */; };
-		6C1A1787C1C9C5B9C85E2FC76B491519 /* SwiftyTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 315AB70F0498F5E23C2C51EF620D712C /* SwiftyTimer-dummy.m */; };
-		6CE24DE37B7EC2A71C5F3A6BB3C239B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */; };
-		8DECB970785FCBAB4A6315DAA0DB0DF2 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA7E654EF0481CBDF89DC46F6C67257 /* SwiftSupport.swift */; };
-		90B7E2F40E17730F3E28449559B458E0 /* UIImage+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = F274CF76CAFEA30300FC02D4B61E79AD /* UIImage+Snapshot.m */; };
-		94FDCD720E559DF4C535B3A8E93080C3 /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = BE06CB531E1FA398B4396E8560CBDA33 /* FBSnapshotTestCasePlatform.m */; };
-		A38506CF4700DA06E89C871D8388D83E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2393D1A899C707F79A64672C46ED238F /* UIKit.framework */; };
-		A7F9AAC65FC2D87C34EA9D6A5ACB4401 /* FBSnapshotTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CCB712E2B27E50F855555F5092CB445 /* FBSnapshotTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AEBA7273A59F2B043A31661C1CB1604C /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D3AA6A4A2CAB7C104BC842A15AF394C /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		BD3C7ABB0598A03B729F141633113043 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AE4001FFDCADEBA4FABAF10346F520 /* FBSnapshotTestCase.m */; };
-		C5C081A0337FC266B8C37E0D858AB743 /* UIImage+Snapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 634788A7FCF2E413D0E9217258801B5D /* UIImage+Snapshot.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E1ED9851C724376D14931DFC1B43D739 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */; };
-		E3118C3110EEDD0D77E12B31730F731C /* SwiftyTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EA2EE7BDDACE89D4DCB4E9B3C23E7B8 /* SwiftyTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E44BA8216CB73A40822467A02D7D847B /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = B6A3DE7E5E029CA0022243B1264C6D9B /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		E529CF6315E6EB33FBA413EDC4BD9CF7 /* FBSnapshotTestCase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C1B93A1B60EC904B1E2A31ED471BF43A /* FBSnapshotTestCase-dummy.m */; };
-		E5433869AEBADC0AADEA47571630C1DB /* Pods-CWNotificationBanner_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2446222E82994FDD46948FFD4E7A8B4B /* Pods-CWNotificationBanner_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E5EFBFEA24204492935B2FB2BA7D21B6 /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 02630BC7B7977F8881939AAFC809FFF0 /* UIApplication+StrictKeyWindow.m */; };
-		FAE5D4824DC21E6D3680505374C88AE0 /* Pods-CWNotificationBanner_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F356CA9818B4168A68BAED6220051E /* Pods-CWNotificationBanner_Tests-dummy.m */; };
-		FBBC9C639BE489C1930862DE3970C257 /* Pods-CWNotificationBanner_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F25DCD45FC648F38F8DC401CF056129 /* Pods-CWNotificationBanner_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FDCF5EFC95C413E5DCF5133D3DFC4170 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853C84AC883B6FC690E82525E7ECB377 /* XCTest.framework */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		120B1BBD742A173507AF09324839F673 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EF6C23F1A8015983BBCAAF4A4A89611C;
-			remoteInfo = SwiftyTimer;
-		};
-		405DE0BF1E7AAAD4E7275D86662B0451 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 772A3FF3D8A39494464ADDC12B7096CF;
-			remoteInfo = FBSnapshotTestCase;
-		};
-		AB2D0B30FF8A176E6046114F7DE87F13 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5D900942FF384E571023D59B515F2892;
-			remoteInfo = CWNotificationBanner;
-		};
-		C0F171EC1CC2583600DD3885 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EF6C23F1A8015983BBCAAF4A4A89611C;
-			remoteInfo = SwiftyTimer;
-		};
-		E4A6152D837123E9E2A2CEAB1963BDC5 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5D900942FF384E571023D59B515F2892;
-			remoteInfo = CWNotificationBanner;
-		};
-		EA57CDCE31F6D49D69CB562EDFC8E28A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B99F6B264C810E5D4CD9B2B478EFC7BC;
-			remoteInfo = "CWNotificationBanner-CWNotificationBanner";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		02630BC7B7977F8881939AAFC809FFF0 /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
-		0528444EFC68619AD1FEB8A7CD4A01BA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		06AE4001FFDCADEBA4FABAF10346F520 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
-		0AD491673A88493EFF7F3D1D70B7C33D /* SwiftyTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0F3D742F569D0DBD2B2413172384E500 /* CWNotificationBanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CWNotificationBanner-dummy.m"; sourceTree = "<group>"; };
-		1B46046A699B5CE50834B03CD16CF91E /* SwiftyTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTimer.xcconfig; sourceTree = "<group>"; };
-		1DC0BD3396B7249421397B6A264E6640 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FBFA96F935D6E393A94A129DE70ACD4 /* Pods-CWNotificationBanner_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CWNotificationBanner_Tests-resources.sh"; sourceTree = "<group>"; };
-		2153E251CEF18C444CD59581461E7538 /* CWNotificationBanner.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWNotificationBanner.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		225E44C64488B0105F5B0C3C46C0AAD7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23341802B42464BD3F3F03C893D94E55 /* CWNotificationBanner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CWNotificationBanner.xcconfig; sourceTree = "<group>"; };
-		2393D1A899C707F79A64672C46ED238F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		2446222E82994FDD46948FFD4E7A8B4B /* Pods-CWNotificationBanner_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CWNotificationBanner_Tests-umbrella.h"; sourceTree = "<group>"; };
-		2A0769F385EEADE6A1745D42CFE3AF2E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BC3866010DF82CEBA4484FB59357981 /* Pods-CWNotificationBanner_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CWNotificationBanner_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2CCB712E2B27E50F855555F5092CB445 /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
-		304E7C449C7188D60B961F3D8BA7F0DB /* Pods_CWNotificationBanner_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWNotificationBanner_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		315AB70F0498F5E23C2C51EF620D712C /* SwiftyTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTimer-dummy.m"; sourceTree = "<group>"; };
-		3447BFD8C21EECB937449FD8A2B8A8AE /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
-		36689C77363EF7A02713BD74CE63448D /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
-		3A7219AD1D834D15213EF3C8BF06ED72 /* CWNotificationBanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CWNotificationBanner-umbrella.h"; sourceTree = "<group>"; };
-		3E7E866FB68BFF15FEA4A88D77A4ED30 /* Pods-CWNotificationBanner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CWNotificationBanner_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4371E482706A1A95819CB27D32427A54 /* NotificationBanner.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = NotificationBanner.xib; sourceTree = "<group>"; };
-		48B8869B1ECDE8ABC42CE8A175901B95 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
-		49F356CA9818B4168A68BAED6220051E /* Pods-CWNotificationBanner_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CWNotificationBanner_Tests-dummy.m"; sourceTree = "<group>"; };
-		4BAE3357631703D34479D55E328CF51D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4F3FFC2EAC53BFF5D6DA0276B7E799D2 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
-		50F9C5E2DFE76FDBB06DE9F91DB62BEF /* CWNotificationBanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CWNotificationBanner.modulemap; sourceTree = "<group>"; };
-		560258049DC5AF90D11617CA36E757D9 /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
-		5D3AA6A4A2CAB7C104BC842A15AF394C /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
-		5EA2EE7BDDACE89D4DCB4E9B3C23E7B8 /* SwiftyTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-umbrella.h"; sourceTree = "<group>"; };
-		5F25DCD45FC648F38F8DC401CF056129 /* Pods-CWNotificationBanner_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CWNotificationBanner_Example-umbrella.h"; sourceTree = "<group>"; };
-		5F47526B4682E1F8005896A216F5A322 /* Pods-CWNotificationBanner_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CWNotificationBanner_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		634788A7FCF2E413D0E9217258801B5D /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
-		7AFA2AFD81322441A4F7C8539EDC8CD6 /* SwiftyTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTimer-prefix.pch"; sourceTree = "<group>"; };
-		8330445823FB5A88E179B9DB4F116C29 /* Pods_CWNotificationBanner_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWNotificationBanner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		853C84AC883B6FC690E82525E7ECB377 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		931974AD0F6EC2292A2968F4A97BBF7D /* Pods-CWNotificationBanner_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CWNotificationBanner_Tests.modulemap"; sourceTree = "<group>"; };
-		9A24A4C396A8739C6F2D6868BB84C97C /* NotificationBanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NotificationBanner.swift; sourceTree = "<group>"; };
-		9EEFA97DF70FC20CBB62E03ED784AE25 /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
-		A039453A59FFAC7C3CD0167C62F1C2C9 /* Pods-CWNotificationBanner_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CWNotificationBanner_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A245694D0A1F4A7FDF3AC254E758236F /* Pods-CWNotificationBanner_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CWNotificationBanner_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		A2CE98AA01F455A14C8400C134D1898B /* CWNotificationBanner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CWNotificationBanner-prefix.pch"; sourceTree = "<group>"; };
-		A7B936324EAC87B83E35B029156FA05D /* SwiftyTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyTimer.modulemap; sourceTree = "<group>"; };
-		A860359678BB949D2E6AB11FA28183A8 /* CWNotificationBanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CWNotificationBanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD768CFDAA33EBB55AC6458FF3609B71 /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
-		B6A3DE7E5E029CA0022243B1264C6D9B /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
-		B9BA2BB23DA72E245C07D9C77C898875 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BE06CB531E1FA398B4396E8560CBDA33 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
-		BEA53CC379D5A990DF5B337EDEB3AB8F /* Pods-CWNotificationBanner_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CWNotificationBanner_Example-frameworks.sh"; sourceTree = "<group>"; };
-		C0F4E44123574EB4ABA127ED9E685064 /* Pods-CWNotificationBanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CWNotificationBanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		C1B93A1B60EC904B1E2A31ED471BF43A /* FBSnapshotTestCase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FBSnapshotTestCase-dummy.m"; sourceTree = "<group>"; };
-		C375530C7888AD82E28E2D1EEDA2EED2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C8BC40A7BC376E5621FE89DDB706BD5B /* Pods-CWNotificationBanner_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CWNotificationBanner_Example.modulemap"; sourceTree = "<group>"; };
-		D0BCA43065608857CCEC7FA9C17ACA48 /* Pods-CWNotificationBanner_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CWNotificationBanner_Example-dummy.m"; sourceTree = "<group>"; };
-		D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D42B206BD4F61A4FDA6854CF7D823F80 /* Pods-CWNotificationBanner_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CWNotificationBanner_Example-resources.sh"; sourceTree = "<group>"; };
-		D7DB1EB61CE55B124EB1251200D826D4 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
-		DAA7E654EF0481CBDF89DC46F6C67257 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
-		E1A10459AA149087450D3934521F3381 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CWNotificationBanner_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		E64A8AC222F14641EB6D09879F890C7D /* SwiftyTimer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTimer.swift; path = Sources/SwiftyTimer.swift; sourceTree = "<group>"; };
-		EA9692C5C254634700DFE03E8FB4A75D /* Pods-CWNotificationBanner_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CWNotificationBanner_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		EF6AC86EF40CC6EA12E772C518ECD645 /* Pods-CWNotificationBanner_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CWNotificationBanner_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		F274CF76CAFEA30300FC02D4B61E79AD /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
-		F92946B4224918563AA8562CCDC04092 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		1062E3A830B3050397E3E3A6A67FBAE1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E1ED9851C724376D14931DFC1B43D739 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2E42DC0CCEF918729BAA641C2B27C005 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				05CFACAC73DC4E715804125973E5F13A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		348965C17AB71570477C9F47F95328DF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				47F4252DEFDE1FD558C94B874F716335 /* Foundation.framework in Frameworks */,
-				3C18F29E03CADC58B278518F22B7B517 /* QuartzCore.framework in Frameworks */,
-				A38506CF4700DA06E89C871D8388D83E /* UIKit.framework in Frameworks */,
-				FDCF5EFC95C413E5DCF5133D3DFC4170 /* XCTest.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8D53B4CCA59C0E59C69CC5936EAC60EA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6CE24DE37B7EC2A71C5F3A6BB3C239B9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CA608F2C1D4DDDDDF245E9129F951A3A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E45E4E2783D9FE32178E51BA08D3C0F5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2DB37220AC01109263246373B69A4992 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		0A8A917ABF736C931D3DCED83CBEBF68 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				36689C77363EF7A02713BD74CE63448D /* FBSnapshotTestCase.modulemap */,
-				48B8869B1ECDE8ABC42CE8A175901B95 /* FBSnapshotTestCase.xcconfig */,
-				C1B93A1B60EC904B1E2A31ED471BF43A /* FBSnapshotTestCase-dummy.m */,
-				F92946B4224918563AA8562CCDC04092 /* FBSnapshotTestCase-prefix.pch */,
-				225E44C64488B0105F5B0C3C46C0AAD7 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/FBSnapshotTestCase";
-			sourceTree = "<group>";
-		};
-		1121624FB1A15E4863124C209E46BAFD /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				9A24A4C396A8739C6F2D6868BB84C97C /* NotificationBanner.swift */,
-				4371E482706A1A95819CB27D32427A54 /* NotificationBanner.xib */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				CD3FB7D37E46A5379C926728A416D78E /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1E3207F9A2E1D9A479DE3F39CA3B6E3D /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5966D014595E3A270E851B21036CBD33 /* CWNotificationBanner */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		39E6E96A9DFA145E8E97609F58FDD33B /* SwiftSupport */ = {
-			isa = PBXGroup;
-			children = (
-				DAA7E654EF0481CBDF89DC46F6C67257 /* SwiftSupport.swift */,
-			);
-			name = SwiftSupport;
-			sourceTree = "<group>";
-		};
-		4B97DCA67AC4E4136C53673D3C56ED9D /* SwiftyTimer */ = {
-			isa = PBXGroup;
-			children = (
-				E64A8AC222F14641EB6D09879F890C7D /* SwiftyTimer.swift */,
-				A2B985392EFAC21029278C77E548B921 /* Support Files */,
-			);
-			path = SwiftyTimer;
-			sourceTree = "<group>";
-		};
-		4DA93B9FB63AC3C209709C28CF11361B /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				2CCB712E2B27E50F855555F5092CB445 /* FBSnapshotTestCase.h */,
-				06AE4001FFDCADEBA4FABAF10346F520 /* FBSnapshotTestCase.m */,
-				4F3FFC2EAC53BFF5D6DA0276B7E799D2 /* FBSnapshotTestCasePlatform.h */,
-				BE06CB531E1FA398B4396E8560CBDA33 /* FBSnapshotTestCasePlatform.m */,
-				560258049DC5AF90D11617CA36E757D9 /* FBSnapshotTestController.h */,
-				D7DB1EB61CE55B124EB1251200D826D4 /* FBSnapshotTestController.m */,
-				3447BFD8C21EECB937449FD8A2B8A8AE /* UIApplication+StrictKeyWindow.h */,
-				02630BC7B7977F8881939AAFC809FFF0 /* UIApplication+StrictKeyWindow.m */,
-				B6A3DE7E5E029CA0022243B1264C6D9B /* UIImage+Compare.h */,
-				AD768CFDAA33EBB55AC6458FF3609B71 /* UIImage+Compare.m */,
-				5D3AA6A4A2CAB7C104BC842A15AF394C /* UIImage+Diff.h */,
-				9EEFA97DF70FC20CBB62E03ED784AE25 /* UIImage+Diff.m */,
-				634788A7FCF2E413D0E9217258801B5D /* UIImage+Snapshot.h */,
-				F274CF76CAFEA30300FC02D4B61E79AD /* UIImage+Snapshot.m */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
-		5966D014595E3A270E851B21036CBD33 /* CWNotificationBanner */ = {
-			isa = PBXGroup;
-			children = (
-				C9C7AA3C8E76DDB5EB22C0762DF3AB6B /* CWNotificationBanner */,
-				897577E361C8447829029878AC332093 /* Support Files */,
-			);
-			name = CWNotificationBanner;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				1E3207F9A2E1D9A479DE3F39CA3B6E3D /* Development Pods */,
-				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				FAE975927BCBE466CF67844E83810792 /* Pods */,
-				C0FB87ED8E1EF7B98F66AF90BB6279CC /* Products */,
-				C0C51AAFC3C06D4FEFAC776165780D23 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		897577E361C8447829029878AC332093 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				50F9C5E2DFE76FDBB06DE9F91DB62BEF /* CWNotificationBanner.modulemap */,
-				23341802B42464BD3F3F03C893D94E55 /* CWNotificationBanner.xcconfig */,
-				0F3D742F569D0DBD2B2413172384E500 /* CWNotificationBanner-dummy.m */,
-				A2CE98AA01F455A14C8400C134D1898B /* CWNotificationBanner-prefix.pch */,
-				3A7219AD1D834D15213EF3C8BF06ED72 /* CWNotificationBanner-umbrella.h */,
-				C375530C7888AD82E28E2D1EEDA2EED2 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/CWNotificationBanner";
-			sourceTree = "<group>";
-		};
-		A2B985392EFAC21029278C77E548B921 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4BAE3357631703D34479D55E328CF51D /* Info.plist */,
-				A7B936324EAC87B83E35B029156FA05D /* SwiftyTimer.modulemap */,
-				1B46046A699B5CE50834B03CD16CF91E /* SwiftyTimer.xcconfig */,
-				315AB70F0498F5E23C2C51EF620D712C /* SwiftyTimer-dummy.m */,
-				7AFA2AFD81322441A4F7C8539EDC8CD6 /* SwiftyTimer-prefix.pch */,
-				5EA2EE7BDDACE89D4DCB4E9B3C23E7B8 /* SwiftyTimer-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyTimer";
-			sourceTree = "<group>";
-		};
-		A584426CE5F604A209462EF8EAF4FCFF /* Pods-CWNotificationBanner_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				B9BA2BB23DA72E245C07D9C77C898875 /* Info.plist */,
-				931974AD0F6EC2292A2968F4A97BBF7D /* Pods-CWNotificationBanner_Tests.modulemap */,
-				5F47526B4682E1F8005896A216F5A322 /* Pods-CWNotificationBanner_Tests-acknowledgements.markdown */,
-				EF6AC86EF40CC6EA12E772C518ECD645 /* Pods-CWNotificationBanner_Tests-acknowledgements.plist */,
-				49F356CA9818B4168A68BAED6220051E /* Pods-CWNotificationBanner_Tests-dummy.m */,
-				EA9692C5C254634700DFE03E8FB4A75D /* Pods-CWNotificationBanner_Tests-frameworks.sh */,
-				1FBFA96F935D6E393A94A129DE70ACD4 /* Pods-CWNotificationBanner_Tests-resources.sh */,
-				2446222E82994FDD46948FFD4E7A8B4B /* Pods-CWNotificationBanner_Tests-umbrella.h */,
-				E1A10459AA149087450D3934521F3381 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */,
-				A039453A59FFAC7C3CD0167C62F1C2C9 /* Pods-CWNotificationBanner_Tests.release.xcconfig */,
-			);
-			name = "Pods-CWNotificationBanner_Tests";
-			path = "Target Support Files/Pods-CWNotificationBanner_Tests";
-			sourceTree = "<group>";
-		};
-		C0C51AAFC3C06D4FEFAC776165780D23 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C35A6CB0EA498C36BE235DBC1D3CC5F9 /* Pods-CWNotificationBanner_Example */,
-				A584426CE5F604A209462EF8EAF4FCFF /* Pods-CWNotificationBanner_Tests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		C0FB87ED8E1EF7B98F66AF90BB6279CC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2153E251CEF18C444CD59581461E7538 /* CWNotificationBanner.bundle */,
-				A860359678BB949D2E6AB11FA28183A8 /* CWNotificationBanner.framework */,
-				1DC0BD3396B7249421397B6A264E6640 /* FBSnapshotTestCase.framework */,
-				8330445823FB5A88E179B9DB4F116C29 /* Pods_CWNotificationBanner_Example.framework */,
-				304E7C449C7188D60B961F3D8BA7F0DB /* Pods_CWNotificationBanner_Tests.framework */,
-				0AD491673A88493EFF7F3D1D70B7C33D /* SwiftyTimer.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C28DBDB7EEECFDCC48E61B5BAF0DBC28 /* FBSnapshotTestCase */ = {
-			isa = PBXGroup;
-			children = (
-				4DA93B9FB63AC3C209709C28CF11361B /* Core */,
-				0A8A917ABF736C931D3DCED83CBEBF68 /* Support Files */,
-				39E6E96A9DFA145E8E97609F58FDD33B /* SwiftSupport */,
-			);
-			path = FBSnapshotTestCase;
-			sourceTree = "<group>";
-		};
-		C35A6CB0EA498C36BE235DBC1D3CC5F9 /* Pods-CWNotificationBanner_Example */ = {
-			isa = PBXGroup;
-			children = (
-				2A0769F385EEADE6A1745D42CFE3AF2E /* Info.plist */,
-				C8BC40A7BC376E5621FE89DDB706BD5B /* Pods-CWNotificationBanner_Example.modulemap */,
-				2BC3866010DF82CEBA4484FB59357981 /* Pods-CWNotificationBanner_Example-acknowledgements.markdown */,
-				A245694D0A1F4A7FDF3AC254E758236F /* Pods-CWNotificationBanner_Example-acknowledgements.plist */,
-				D0BCA43065608857CCEC7FA9C17ACA48 /* Pods-CWNotificationBanner_Example-dummy.m */,
-				BEA53CC379D5A990DF5B337EDEB3AB8F /* Pods-CWNotificationBanner_Example-frameworks.sh */,
-				D42B206BD4F61A4FDA6854CF7D823F80 /* Pods-CWNotificationBanner_Example-resources.sh */,
-				5F25DCD45FC648F38F8DC401CF056129 /* Pods-CWNotificationBanner_Example-umbrella.h */,
-				C0F4E44123574EB4ABA127ED9E685064 /* Pods-CWNotificationBanner_Example.debug.xcconfig */,
-				3E7E866FB68BFF15FEA4A88D77A4ED30 /* Pods-CWNotificationBanner_Example.release.xcconfig */,
-			);
-			name = "Pods-CWNotificationBanner_Example";
-			path = "Target Support Files/Pods-CWNotificationBanner_Example";
-			sourceTree = "<group>";
-		};
-		C9C7AA3C8E76DDB5EB22C0762DF3AB6B /* CWNotificationBanner */ = {
-			isa = PBXGroup;
-			children = (
-				1121624FB1A15E4863124C209E46BAFD /* Classes */,
-			);
-			path = CWNotificationBanner;
-			sourceTree = "<group>";
-		};
-		CD3FB7D37E46A5379C926728A416D78E /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				D31B096AB4A0164C61B63F0E59AD76C9 /* Foundation.framework */,
-				0528444EFC68619AD1FEB8A7CD4A01BA /* QuartzCore.framework */,
-				2393D1A899C707F79A64672C46ED238F /* UIKit.framework */,
-				853C84AC883B6FC690E82525E7ECB377 /* XCTest.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		FAE975927BCBE466CF67844E83810792 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C28DBDB7EEECFDCC48E61B5BAF0DBC28 /* FBSnapshotTestCase */,
-				4B97DCA67AC4E4136C53673D3C56ED9D /* SwiftyTimer */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		0EF4B33C5C9AD4642E9C4AB1DA204623 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A7F9AAC65FC2D87C34EA9D6A5ACB4401 /* FBSnapshotTestCase.h in Headers */,
-				2696638529960E774A76D99A13D595BB /* FBSnapshotTestCasePlatform.h in Headers */,
-				3FF33EF2BEA328811C6BC7C97A9776A3 /* FBSnapshotTestController.h in Headers */,
-				125E9AB8D9F3FA41A578627E57C1B37A /* UIApplication+StrictKeyWindow.h in Headers */,
-				E44BA8216CB73A40822467A02D7D847B /* UIImage+Compare.h in Headers */,
-				AEBA7273A59F2B043A31661C1CB1604C /* UIImage+Diff.h in Headers */,
-				C5C081A0337FC266B8C37E0D858AB743 /* UIImage+Snapshot.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3C935B409A6D4A5A60675BBA45F98BF0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E3118C3110EEDD0D77E12B31730F731C /* SwiftyTimer-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		600839C5B71F83A0818270039709291F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FBBC9C639BE489C1930862DE3970C257 /* Pods-CWNotificationBanner_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FCF19089A1F3897EDAADF596E0348211 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E5433869AEBADC0AADEA47571630C1DB /* Pods-CWNotificationBanner_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FECA10DFB2763720A3EAE03CD2E55F46 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04A6773875E420B994FD70378F132CE5 /* CWNotificationBanner-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		4BEBDDB354B416678057F34951145691 /* Pods-CWNotificationBanner_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D60D7FB6CD569A8E85E464BAF37C4AB0 /* Build configuration list for PBXNativeTarget "Pods-CWNotificationBanner_Tests" */;
-			buildPhases = (
-				C3A3BB55F8F20AC7C5873082D440B4DE /* Sources */,
-				1062E3A830B3050397E3E3A6A67FBAE1 /* Frameworks */,
-				FCF19089A1F3897EDAADF596E0348211 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6F40C059EF8F4921D8459DBD77BDAE64 /* PBXTargetDependency */,
-				57C62FA61AE9F2F1EA63C44FAB2FC6DB /* PBXTargetDependency */,
-			);
-			name = "Pods-CWNotificationBanner_Tests";
-			productName = "Pods-CWNotificationBanner_Tests";
-			productReference = 304E7C449C7188D60B961F3D8BA7F0DB /* Pods_CWNotificationBanner_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		5D900942FF384E571023D59B515F2892 /* CWNotificationBanner */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27078F90B0B9BEF5ADB9C939396DC80B /* Build configuration list for PBXNativeTarget "CWNotificationBanner" */;
-			buildPhases = (
-				DE378193632A1677FC3AC67D7DD3E6E3 /* Sources */,
-				E45E4E2783D9FE32178E51BA08D3C0F5 /* Frameworks */,
-				74123A5F6D9301F70F2CC094FAA4BD50 /* Resources */,
-				FECA10DFB2763720A3EAE03CD2E55F46 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C0F171ED1CC2583600DD3885 /* PBXTargetDependency */,
-				C97426182DB39037AA9ECA93E893C481 /* PBXTargetDependency */,
-			);
-			name = CWNotificationBanner;
-			productName = CWNotificationBanner;
-			productReference = A860359678BB949D2E6AB11FA28183A8 /* CWNotificationBanner.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		772A3FF3D8A39494464ADDC12B7096CF /* FBSnapshotTestCase */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BA7FB690F3A08BB1E33865B1F9974E46 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */;
-			buildPhases = (
-				E6598C946CB8C42DFF6CB23648937553 /* Sources */,
-				348965C17AB71570477C9F47F95328DF /* Frameworks */,
-				0EF4B33C5C9AD4642E9C4AB1DA204623 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = FBSnapshotTestCase;
-			productName = FBSnapshotTestCase;
-			productReference = 1DC0BD3396B7249421397B6A264E6640 /* FBSnapshotTestCase.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		7CBAFD7423520842E2DA80A8EABBDFAB /* Pods-CWNotificationBanner_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2EE193BB940E72023A311E12E12CD0FB /* Build configuration list for PBXNativeTarget "Pods-CWNotificationBanner_Example" */;
-			buildPhases = (
-				D64DAF27B0B85D73A35F2181A996C2AE /* Sources */,
-				8D53B4CCA59C0E59C69CC5936EAC60EA /* Frameworks */,
-				600839C5B71F83A0818270039709291F /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				880947FD81563BB2F1F2BAFFE24E4462 /* PBXTargetDependency */,
-				EC947D1A6660856D1B22F336327C4959 /* PBXTargetDependency */,
-			);
-			name = "Pods-CWNotificationBanner_Example";
-			productName = "Pods-CWNotificationBanner_Example";
-			productReference = 8330445823FB5A88E179B9DB4F116C29 /* Pods_CWNotificationBanner_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B99F6B264C810E5D4CD9B2B478EFC7BC /* CWNotificationBanner-CWNotificationBanner */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3AED23F1B4382E4DCF0E76AFEB744160 /* Build configuration list for PBXNativeTarget "CWNotificationBanner-CWNotificationBanner" */;
-			buildPhases = (
-				27D12DA3AC3AEFA99923849D9297CEB0 /* Sources */,
-				CA608F2C1D4DDDDDF245E9129F951A3A /* Frameworks */,
-				FE583145C81E221F08B30C2770BEE09F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "CWNotificationBanner-CWNotificationBanner";
-			productName = "CWNotificationBanner-CWNotificationBanner";
-			productReference = 2153E251CEF18C444CD59581461E7538 /* CWNotificationBanner.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		EF6C23F1A8015983BBCAAF4A4A89611C /* SwiftyTimer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF7FC73A72DBC49D3161F3E5B8D4FC82 /* Build configuration list for PBXNativeTarget "SwiftyTimer" */;
-			buildPhases = (
-				1C0C12FCAAD9F0A1FE2F639669E89572 /* Sources */,
-				2E42DC0CCEF918729BAA641C2B27C005 /* Frameworks */,
-				3C935B409A6D4A5A60675BBA45F98BF0 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftyTimer;
-			productName = SwiftyTimer;
-			productReference = 0AD491673A88493EFF7F3D1D70B7C33D /* SwiftyTimer.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0730;
-				TargetAttributes = {
-					5D900942FF384E571023D59B515F2892 = {
-						DevelopmentTeam = N2WM6EN8GQ;
-					};
-				};
-			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C0FB87ED8E1EF7B98F66AF90BB6279CC /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				5D900942FF384E571023D59B515F2892 /* CWNotificationBanner */,
-				B99F6B264C810E5D4CD9B2B478EFC7BC /* CWNotificationBanner-CWNotificationBanner */,
-				772A3FF3D8A39494464ADDC12B7096CF /* FBSnapshotTestCase */,
-				7CBAFD7423520842E2DA80A8EABBDFAB /* Pods-CWNotificationBanner_Example */,
-				4BEBDDB354B416678057F34951145691 /* Pods-CWNotificationBanner_Tests */,
-				EF6C23F1A8015983BBCAAF4A4A89611C /* SwiftyTimer */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		74123A5F6D9301F70F2CC094FAA4BD50 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				481B8A32E321CD50722619DF22B8BB2A /* CWNotificationBanner.bundle in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FE583145C81E221F08B30C2770BEE09F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		1C0C12FCAAD9F0A1FE2F639669E89572 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6C1A1787C1C9C5B9C85E2FC76B491519 /* SwiftyTimer-dummy.m in Sources */,
-				2D35AEE7A0E4C197A5BC1E3A01C0D2D7 /* SwiftyTimer.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27D12DA3AC3AEFA99923849D9297CEB0 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C3A3BB55F8F20AC7C5873082D440B4DE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FAE5D4824DC21E6D3680505374C88AE0 /* Pods-CWNotificationBanner_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D64DAF27B0B85D73A35F2181A996C2AE /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5406C486E33BDA850F4FCC715FEC0D70 /* Pods-CWNotificationBanner_Example-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DE378193632A1677FC3AC67D7DD3E6E3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				01C37A59806E6227E2E2F36B34FB6622 /* CWNotificationBanner-dummy.m in Sources */,
-				404FB4530B0302D64445D8784182D6C3 /* NotificationBanner.swift in Sources */,
-				57F1C848B1FF345095A47F843CFDC70D /* NotificationBanner.xib in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E6598C946CB8C42DFF6CB23648937553 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E529CF6315E6EB33FBA413EDC4BD9CF7 /* FBSnapshotTestCase-dummy.m in Sources */,
-				BD3C7ABB0598A03B729F141633113043 /* FBSnapshotTestCase.m in Sources */,
-				94FDCD720E559DF4C535B3A8E93080C3 /* FBSnapshotTestCasePlatform.m in Sources */,
-				58CA52BCED9F6E2A9CCE4DF19E873D3E /* FBSnapshotTestController.m in Sources */,
-				8DECB970785FCBAB4A6315DAA0DB0DF2 /* SwiftSupport.swift in Sources */,
-				E5EFBFEA24204492935B2FB2BA7D21B6 /* UIApplication+StrictKeyWindow.m in Sources */,
-				500CFFB619BA25FB57B6AF48F8CCD8F3 /* UIImage+Compare.m in Sources */,
-				3C85E62EBD0D660C3DB557FABF9B8E10 /* UIImage+Diff.m in Sources */,
-				90B7E2F40E17730F3E28449559B458E0 /* UIImage+Snapshot.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		57C62FA61AE9F2F1EA63C44FAB2FC6DB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FBSnapshotTestCase;
-			target = 772A3FF3D8A39494464ADDC12B7096CF /* FBSnapshotTestCase */;
-			targetProxy = 405DE0BF1E7AAAD4E7275D86662B0451 /* PBXContainerItemProxy */;
-		};
-		6F40C059EF8F4921D8459DBD77BDAE64 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CWNotificationBanner;
-			target = 5D900942FF384E571023D59B515F2892 /* CWNotificationBanner */;
-			targetProxy = AB2D0B30FF8A176E6046114F7DE87F13 /* PBXContainerItemProxy */;
-		};
-		880947FD81563BB2F1F2BAFFE24E4462 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CWNotificationBanner;
-			target = 5D900942FF384E571023D59B515F2892 /* CWNotificationBanner */;
-			targetProxy = E4A6152D837123E9E2A2CEAB1963BDC5 /* PBXContainerItemProxy */;
-		};
-		C0F171ED1CC2583600DD3885 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EF6C23F1A8015983BBCAAF4A4A89611C /* SwiftyTimer */;
-			targetProxy = C0F171EC1CC2583600DD3885 /* PBXContainerItemProxy */;
-		};
-		C97426182DB39037AA9ECA93E893C481 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "CWNotificationBanner-CWNotificationBanner";
-			target = B99F6B264C810E5D4CD9B2B478EFC7BC /* CWNotificationBanner-CWNotificationBanner */;
-			targetProxy = EA57CDCE31F6D49D69CB562EDFC8E28A /* PBXContainerItemProxy */;
-		};
-		EC947D1A6660856D1B22F336327C4959 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyTimer;
-			target = EF6C23F1A8015983BBCAAF4A4A89611C /* SwiftyTimer */;
-			targetProxy = 120B1BBD742A173507AF09324839F673 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		0E858C8652968E6E0873AB050C4057A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48B8869B1ECDE8ABC42CE8A175901B95 /* FBSnapshotTestCase.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = FBSnapshotTestCase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		18A361C646871484BE186918D5190A7A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48B8869B1ECDE8ABC42CE8A175901B95 /* FBSnapshotTestCase.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FBSnapshotTestCase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = FBSnapshotTestCase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		24B60715BBF17C8064F466047B1CA7AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23341802B42464BD3F3F03C893D94E55 /* CWNotificationBanner.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = CWNotificationBanner;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		2E942A8AE0F1B07457F1715D17E1B708 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B46046A699B5CE50834B03CD16CF91E /* SwiftyTimer.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyTimer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = SwiftyTimer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3B553883F3AD9325FC0FD84835A5EA00 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23341802B42464BD3F3F03C893D94E55 /* CWNotificationBanner.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = CWNotificationBanner;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		4B70C6924A2AD83F29227815F00B44C5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E7E866FB68BFF15FEA4A88D77A4ED30 /* Pods-CWNotificationBanner_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CWNotificationBanner_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CWNotificationBanner_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5DB1704234E0EAA101F26E367670C2D2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B46046A699B5CE50834B03CD16CF91E /* SwiftyTimer.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyTimer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = SwiftyTimer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		97FC69B98FB381B9FBA8F26B861D234F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23341802B42464BD3F3F03C893D94E55 /* CWNotificationBanner.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CWNotificationBanner/CWNotificationBanner-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CWNotificationBanner/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CWNotificationBanner/CWNotificationBanner.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = CWNotificationBanner;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		B176B709891A133ECCD309CD312107DF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A039453A59FFAC7C3CD0167C62F1C2C9 /* Pods-CWNotificationBanner_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CWNotificationBanner_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CWNotificationBanner_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CDA229DD6B8811A659D439B4A9DEDF7F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1A10459AA149087450D3934521F3381 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CWNotificationBanner_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CWNotificationBanner_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CDFB0589E122ABFF9E6EE440827916D7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0F4E44123574EB4ABA127ED9E685064 /* Pods-CWNotificationBanner_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-CWNotificationBanner_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_CWNotificationBanner_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D9C161892E8BFC171CD99A0B41965934 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 23341802B42464BD3F3F03C893D94E55 /* CWNotificationBanner.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/CWNotificationBanner/CWNotificationBanner-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CWNotificationBanner/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/CWNotificationBanner/CWNotificationBanner.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = CWNotificationBanner;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		27078F90B0B9BEF5ADB9C939396DC80B /* Build configuration list for PBXNativeTarget "CWNotificationBanner" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D9C161892E8BFC171CD99A0B41965934 /* Debug */,
-				97FC69B98FB381B9FBA8F26B861D234F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
-				FB45FFD90572718D82AB9092B750F0CA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2EE193BB940E72023A311E12E12CD0FB /* Build configuration list for PBXNativeTarget "Pods-CWNotificationBanner_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDFB0589E122ABFF9E6EE440827916D7 /* Debug */,
-				4B70C6924A2AD83F29227815F00B44C5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3AED23F1B4382E4DCF0E76AFEB744160 /* Build configuration list for PBXNativeTarget "CWNotificationBanner-CWNotificationBanner" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				24B60715BBF17C8064F466047B1CA7AA /* Debug */,
-				3B553883F3AD9325FC0FD84835A5EA00 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF7FC73A72DBC49D3161F3E5B8D4FC82 /* Build configuration list for PBXNativeTarget "SwiftyTimer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2E942A8AE0F1B07457F1715D17E1B708 /* Debug */,
-				5DB1704234E0EAA101F26E367670C2D2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BA7FB690F3A08BB1E33865B1F9974E46 /* Build configuration list for PBXNativeTarget "FBSnapshotTestCase" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0E858C8652968E6E0873AB050C4057A8 /* Debug */,
-				18A361C646871484BE186918D5190A7A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D60D7FB6CD569A8E85E464BAF37C4AB0 /* Build configuration list for PBXNativeTarget "Pods-CWNotificationBanner_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CDA229DD6B8811A659D439B4A9DEDF7F /* Debug */,
-				B176B709891A133ECCD309CD312107DF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>01C37A59806E6227E2E2F36B34FB6622</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0F3D742F569D0DBD2B2413172384E500</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>02630BC7B7977F8881939AAFC809FFF0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIApplication+StrictKeyWindow.m</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04A6773875E420B994FD70378F132CE5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3A7219AD1D834D15213EF3C8BF06ED72</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>0528444EFC68619AD1FEB8A7CD4A01BA</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>QuartzCore.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>05CFACAC73DC4E715804125973E5F13A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D31B096AB4A0164C61B63F0E59AD76C9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>06AE4001FFDCADEBA4FABAF10346F520</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FBSnapshotTestCase.m</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/FBSnapshotTestCase.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0A8A917ABF736C931D3DCED83CBEBF68</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>36689C77363EF7A02713BD74CE63448D</string>
+				<string>48B8869B1ECDE8ABC42CE8A175901B95</string>
+				<string>C1B93A1B60EC904B1E2A31ED471BF43A</string>
+				<string>F92946B4224918563AA8562CCDC04092</string>
+				<string>225E44C64488B0105F5B0C3C46C0AAD7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/FBSnapshotTestCase</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0AD491673A88493EFF7F3D1D70B7C33D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>SwiftyTimer.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>0E858C8652968E6E0873AB050C4057A8</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>48B8869B1ECDE8ABC42CE8A175901B95</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/FBSnapshotTestCase/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>FBSnapshotTestCase</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0EF4B33C5C9AD4642E9C4AB1DA204623</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>A7F9AAC65FC2D87C34EA9D6A5ACB4401</string>
+				<string>2696638529960E774A76D99A13D595BB</string>
+				<string>3FF33EF2BEA328811C6BC7C97A9776A3</string>
+				<string>125E9AB8D9F3FA41A578627E57C1B37A</string>
+				<string>E44BA8216CB73A40822467A02D7D847B</string>
+				<string>AEBA7273A59F2B043A31661C1CB1604C</string>
+				<string>C5C081A0337FC266B8C37E0D858AB743</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>0F3D742F569D0DBD2B2413172384E500</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>CWNotificationBanner-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1062E3A830B3050397E3E3A6A67FBAE1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E1ED9851C724376D14931DFC1B43D739</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1121624FB1A15E4863124C209E46BAFD</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>9A24A4C396A8739C6F2D6868BB84C97C</string>
+				<string>4371E482706A1A95819CB27D32427A54</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Classes</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>120B1BBD742A173507AF09324839F673</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>EF6C23F1A8015983BBCAAF4A4A89611C</string>
+			<key>remoteInfo</key>
+			<string>SwiftyTimer</string>
+		</dict>
+		<key>125E9AB8D9F3FA41A578627E57C1B37A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3447BFD8C21EECB937449FD8A2B8A8AE</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>14B8B9B15ECBE87983FF987239AB2D7B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CD3FB7D37E46A5379C926728A416D78E</string>
+				<string>C734B3E3D956ADCF96CBF8DF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>18A361C646871484BE186918D5190A7A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>48B8869B1ECDE8ABC42CE8A175901B95</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/FBSnapshotTestCase/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/FBSnapshotTestCase/FBSnapshotTestCase.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>FBSnapshotTestCase</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>1B46046A699B5CE50834B03CD16CF91E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>SwiftyTimer.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C0C12FCAAD9F0A1FE2F639669E89572</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6C1A1787C1C9C5B9C85E2FC76B491519</string>
+				<string>2D35AEE7A0E4C197A5BC1E3A01C0D2D7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1DC0BD3396B7249421397B6A264E6640</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>1E3207F9A2E1D9A479DE3F39CA3B6E3D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5966D014595E3A270E851B21036CBD33</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Development Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1FBFA96F935D6E393A94A129DE70ACD4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Tests-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2042B4FAFD20CF99BA15BC6E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C734B3E3D956ADCF96CBF8DF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2153E251CEF18C444CD59581461E7538</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>CWNotificationBanner.bundle</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>225E44C64488B0105F5B0C3C46C0AAD7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>23341802B42464BD3F3F03C893D94E55</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>CWNotificationBanner.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2393D1A899C707F79A64672C46ED238F</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>2446222E82994FDD46948FFD4E7A8B4B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Tests-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>24B60715BBF17C8064F466047B1CA7AA</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>23341802B42464BD3F3F03C893D94E55</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>CWNotificationBanner</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>bundle</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2696638529960E774A76D99A13D595BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4F3FFC2EAC53BFF5D6DA0276B7E799D2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>27078F90B0B9BEF5ADB9C939396DC80B</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>D9C161892E8BFC171CD99A0B41965934</string>
+				<string>97FC69B98FB381B9FBA8F26B861D234F</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>27D12DA3AC3AEFA99923849D9297CEB0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2A0769F385EEADE6A1745D42CFE3AF2E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2BC3866010DF82CEBA4484FB59357981</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Example-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2CCB712E2B27E50F855555F5092CB445</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FBSnapshotTestCase.h</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/FBSnapshotTestCase.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D35AEE7A0E4C197A5BC1E3A01C0D2D7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E64A8AC222F14641EB6D09879F890C7D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>A70CDAD61F90AC503C7D04CC22DA2923</string>
+				<string>FB45FFD90572718D82AB9092B750F0CA</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2DB37220AC01109263246373B69A4992</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D31B096AB4A0164C61B63F0E59AD76C9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2E42DC0CCEF918729BAA641C2B27C005</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>05CFACAC73DC4E715804125973E5F13A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>2E474EA4216376B728C05691</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-CWNotificationBanner/Pods-CWNotificationBanner-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>2E942A8AE0F1B07457F1715D17E1B708</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1B46046A699B5CE50834B03CD16CF91E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/SwiftyTimer/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/SwiftyTimer/SwiftyTimer.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>SwiftyTimer</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>2EE193BB940E72023A311E12E12CD0FB</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>CDFB0589E122ABFF9E6EE440827916D7</string>
+				<string>4B70C6924A2AD83F29227815F00B44C5</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>304E7C449C7188D60B961F3D8BA7F0DB</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_CWNotificationBanner_Tests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>315AB70F0498F5E23C2C51EF620D712C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>SwiftyTimer-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3447BFD8C21EECB937449FD8A2B8A8AE</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIApplication+StrictKeyWindow.h</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>348965C17AB71570477C9F47F95328DF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>47F4252DEFDE1FD558C94B874F716335</string>
+				<string>3C18F29E03CADC58B278518F22B7B517</string>
+				<string>A38506CF4700DA06E89C871D8388D83E</string>
+				<string>FDCF5EFC95C413E5DCF5133D3DFC4170</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>36689C77363EF7A02713BD74CE63448D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.module-map</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>39E6E96A9DFA145E8E97609F58FDD33B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DAA7E654EF0481CBDF89DC46F6C67257</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>SwiftSupport</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3A7219AD1D834D15213EF3C8BF06ED72</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>CWNotificationBanner-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3AED23F1B4382E4DCF0E76AFEB744160</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>24B60715BBF17C8064F466047B1CA7AA</string>
+				<string>3B553883F3AD9325FC0FD84835A5EA00</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>3B553883F3AD9325FC0FD84835A5EA00</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>23341802B42464BD3F3F03C893D94E55</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>PRODUCT_NAME</key>
+				<string>CWNotificationBanner</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>bundle</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>3C18F29E03CADC58B278518F22B7B517</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0528444EFC68619AD1FEB8A7CD4A01BA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3C85E62EBD0D660C3DB557FABF9B8E10</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9EEFA97DF70FC20CBB62E03ED784AE25</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>3C935B409A6D4A5A60675BBA45F98BF0</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E3118C3110EEDD0D77E12B31730F731C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3E7E866FB68BFF15FEA4A88D77A4ED30</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Example.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3FF33EF2BEA328811C6BC7C97A9776A3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>560258049DC5AF90D11617CA36E757D9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>404FB4530B0302D64445D8784182D6C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9A24A4C396A8739C6F2D6868BB84C97C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>405DE0BF1E7AAAD4E7275D86662B0451</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>772A3FF3D8A39494464ADDC12B7096CF</string>
+			<key>remoteInfo</key>
+			<string>FBSnapshotTestCase</string>
+		</dict>
+		<key>4371E482706A1A95819CB27D32427A54</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.xib</string>
+			<key>path</key>
+			<string>NotificationBanner.xib</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>47F4252DEFDE1FD558C94B874F716335</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D31B096AB4A0164C61B63F0E59AD76C9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>481B8A32E321CD50722619DF22B8BB2A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2153E251CEF18C444CD59581461E7538</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>48B8869B1ECDE8ABC42CE8A175901B95</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>493A2504A8DCA3E8ED94BFD1</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>49F356CA9818B4168A68BAED6220051E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Tests-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4B70C6924A2AD83F29227815F00B44C5</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>3E7E866FB68BFF15FEA4A88D77A4ED30</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CWNotificationBanner_Example/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_CWNotificationBanner_Example</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4B97DCA67AC4E4136C53673D3C56ED9D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E64A8AC222F14641EB6D09879F890C7D</string>
+				<string>A2B985392EFAC21029278C77E548B921</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>SwiftyTimer</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4BAE3357631703D34479D55E328CF51D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4BEBDDB354B416678057F34951145691</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>D60D7FB6CD569A8E85E464BAF37C4AB0</string>
+			<key>buildPhases</key>
+			<array>
+				<string>C3A3BB55F8F20AC7C5873082D440B4DE</string>
+				<string>1062E3A830B3050397E3E3A6A67FBAE1</string>
+				<string>FCF19089A1F3897EDAADF596E0348211</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>6F40C059EF8F4921D8459DBD77BDAE64</string>
+				<string>57C62FA61AE9F2F1EA63C44FAB2FC6DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-CWNotificationBanner_Tests</string>
+			<key>productName</key>
+			<string>Pods-CWNotificationBanner_Tests</string>
+			<key>productReference</key>
+			<string>304E7C449C7188D60B961F3D8BA7F0DB</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>4DA93B9FB63AC3C209709C28CF11361B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2CCB712E2B27E50F855555F5092CB445</string>
+				<string>06AE4001FFDCADEBA4FABAF10346F520</string>
+				<string>4F3FFC2EAC53BFF5D6DA0276B7E799D2</string>
+				<string>BE06CB531E1FA398B4396E8560CBDA33</string>
+				<string>560258049DC5AF90D11617CA36E757D9</string>
+				<string>D7DB1EB61CE55B124EB1251200D826D4</string>
+				<string>3447BFD8C21EECB937449FD8A2B8A8AE</string>
+				<string>02630BC7B7977F8881939AAFC809FFF0</string>
+				<string>B6A3DE7E5E029CA0022243B1264C6D9B</string>
+				<string>AD768CFDAA33EBB55AC6458FF3609B71</string>
+				<string>5D3AA6A4A2CAB7C104BC842A15AF394C</string>
+				<string>9EEFA97DF70FC20CBB62E03ED784AE25</string>
+				<string>634788A7FCF2E413D0E9217258801B5D</string>
+				<string>F274CF76CAFEA30300FC02D4B61E79AD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Core</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4F3FFC2EAC53BFF5D6DA0276B7E799D2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FBSnapshotTestCasePlatform.h</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/FBSnapshotTestCasePlatform.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>500CFFB619BA25FB57B6AF48F8CCD8F3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AD768CFDAA33EBB55AC6458FF3609B71</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>50F9C5E2DFE76FDBB06DE9F91DB62BEF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.module-map</string>
+			<key>path</key>
+			<string>CWNotificationBanner.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5406C486E33BDA850F4FCC715FEC0D70</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D0BCA43065608857CCEC7FA9C17ACA48</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>560258049DC5AF90D11617CA36E757D9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>FBSnapshotTestController.h</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/FBSnapshotTestController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>57C62FA61AE9F2F1EA63C44FAB2FC6DB</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>FBSnapshotTestCase</string>
+			<key>target</key>
+			<string>772A3FF3D8A39494464ADDC12B7096CF</string>
+			<key>targetProxy</key>
+			<string>405DE0BF1E7AAAD4E7275D86662B0451</string>
+		</dict>
+		<key>57F1C848B1FF345095A47F843CFDC70D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4371E482706A1A95819CB27D32427A54</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>58CA52BCED9F6E2A9CCE4DF19E873D3E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D7DB1EB61CE55B124EB1251200D826D4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5966D014595E3A270E851B21036CBD33</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C9C7AA3C8E76DDB5EB22C0762DF3AB6B</string>
+				<string>897577E361C8447829029878AC332093</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>CWNotificationBanner</string>
+			<key>path</key>
+			<string>../..</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5D3AA6A4A2CAB7C104BC842A15AF394C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIImage+Diff.h</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/Categories/UIImage+Diff.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5D900942FF384E571023D59B515F2892</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>27078F90B0B9BEF5ADB9C939396DC80B</string>
+			<key>buildPhases</key>
+			<array>
+				<string>493A2504A8DCA3E8ED94BFD1</string>
+				<string>DE378193632A1677FC3AC67D7DD3E6E3</string>
+				<string>E45E4E2783D9FE32178E51BA08D3C0F5</string>
+				<string>74123A5F6D9301F70F2CC094FAA4BD50</string>
+				<string>FECA10DFB2763720A3EAE03CD2E55F46</string>
+				<string>2E474EA4216376B728C05691</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>C0F171ED1CC2583600DD3885</string>
+				<string>C97426182DB39037AA9ECA93E893C481</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>CWNotificationBanner</string>
+			<key>productName</key>
+			<string>CWNotificationBanner</string>
+			<key>productReference</key>
+			<string>A860359678BB949D2E6AB11FA28183A8</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>5DB1704234E0EAA101F26E367670C2D2</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>1B46046A699B5CE50834B03CD16CF91E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/SwiftyTimer/SwiftyTimer-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/SwiftyTimer/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/SwiftyTimer/SwiftyTimer.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>SwiftyTimer</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>5EA2EE7BDDACE89D4DCB4E9B3C23E7B8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SwiftyTimer-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5F25DCD45FC648F38F8DC401CF056129</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Example-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5F47526B4682E1F8005896A216F5A322</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Tests-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>600839C5B71F83A0818270039709291F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>FBBC9C639BE489C1930862DE3970C257</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>634788A7FCF2E413D0E9217258801B5D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIImage+Snapshot.h</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/Categories/UIImage+Snapshot.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6C1A1787C1C9C5B9C85E2FC76B491519</key>
+		<dict>
+			<key>fileRef</key>
+			<string>315AB70F0498F5E23C2C51EF620D712C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6CE24DE37B7EC2A71C5F3A6BB3C239B9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D31B096AB4A0164C61B63F0E59AD76C9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6F40C059EF8F4921D8459DBD77BDAE64</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>CWNotificationBanner</string>
+			<key>target</key>
+			<string>5D900942FF384E571023D59B515F2892</string>
+			<key>targetProxy</key>
+			<string>AB2D0B30FF8A176E6046114F7DE87F13</string>
+		</dict>
+		<key>74123A5F6D9301F70F2CC094FAA4BD50</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>481B8A32E321CD50722619DF22B8BB2A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>772A3FF3D8A39494464ADDC12B7096CF</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>BA7FB690F3A08BB1E33865B1F9974E46</string>
+			<key>buildPhases</key>
+			<array>
+				<string>E6598C946CB8C42DFF6CB23648937553</string>
+				<string>348965C17AB71570477C9F47F95328DF</string>
+				<string>0EF4B33C5C9AD4642E9C4AB1DA204623</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>FBSnapshotTestCase</string>
+			<key>productName</key>
+			<string>FBSnapshotTestCase</string>
+			<key>productReference</key>
+			<string>1DC0BD3396B7249421397B6A264E6640</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>7AFA2AFD81322441A4F7C8539EDC8CD6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>SwiftyTimer-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7CBAFD7423520842E2DA80A8EABBDFAB</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>2EE193BB940E72023A311E12E12CD0FB</string>
+			<key>buildPhases</key>
+			<array>
+				<string>D64DAF27B0B85D73A35F2181A996C2AE</string>
+				<string>8D53B4CCA59C0E59C69CC5936EAC60EA</string>
+				<string>600839C5B71F83A0818270039709291F</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>880947FD81563BB2F1F2BAFFE24E4462</string>
+				<string>EC947D1A6660856D1B22F336327C4959</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-CWNotificationBanner_Example</string>
+			<key>productName</key>
+			<string>Pods-CWNotificationBanner_Example</string>
+			<key>productReference</key>
+			<string>8330445823FB5A88E179B9DB4F116C29</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
+				<string>1E3207F9A2E1D9A479DE3F39CA3B6E3D</string>
+				<string>14B8B9B15ECBE87983FF987239AB2D7B</string>
+				<string>FAE975927BCBE466CF67844E83810792</string>
+				<string>C0FB87ED8E1EF7B98F66AF90BB6279CC</string>
+				<string>C0C51AAFC3C06D4FEFAC776165780D23</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8330445823FB5A88E179B9DB4F116C29</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_CWNotificationBanner_Example.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>853C84AC883B6FC690E82525E7ECB377</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>880947FD81563BB2F1F2BAFFE24E4462</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>CWNotificationBanner</string>
+			<key>target</key>
+			<string>5D900942FF384E571023D59B515F2892</string>
+			<key>targetProxy</key>
+			<string>E4A6152D837123E9E2A2CEAB1963BDC5</string>
+		</dict>
+		<key>897577E361C8447829029878AC332093</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>50F9C5E2DFE76FDBB06DE9F91DB62BEF</string>
+				<string>23341802B42464BD3F3F03C893D94E55</string>
+				<string>0F3D742F569D0DBD2B2413172384E500</string>
+				<string>A2CE98AA01F455A14C8400C134D1898B</string>
+				<string>3A7219AD1D834D15213EF3C8BF06ED72</string>
+				<string>C375530C7888AD82E28E2D1EEDA2EED2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>Example/Pods/Target Support Files/CWNotificationBanner</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8D53B4CCA59C0E59C69CC5936EAC60EA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6CE24DE37B7EC2A71C5F3A6BB3C239B9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>8DECB970785FCBAB4A6315DAA0DB0DF2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DAA7E654EF0481CBDF89DC46F6C67257</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>90B7E2F40E17730F3E28449559B458E0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F274CF76CAFEA30300FC02D4B61E79AD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>931974AD0F6EC2292A2968F4A97BBF7D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.module-map</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Tests.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>94FDCD720E559DF4C535B3A8E93080C3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BE06CB531E1FA398B4396E8560CBDA33</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>97FC69B98FB381B9FBA8F26B861D234F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>23341802B42464BD3F3F03C893D94E55</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/CWNotificationBanner/CWNotificationBanner-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/CWNotificationBanner/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/CWNotificationBanner/CWNotificationBanner.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>CWNotificationBanner</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>9A24A4C396A8739C6F2D6868BB84C97C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>path</key>
+			<string>NotificationBanner.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9EEFA97DF70FC20CBB62E03ED784AE25</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIImage+Diff.m</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/Categories/UIImage+Diff.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A039453A59FFAC7C3CD0167C62F1C2C9</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Tests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A245694D0A1F4A7FDF3AC254E758236F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Example-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A2B985392EFAC21029278C77E548B921</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4BAE3357631703D34479D55E328CF51D</string>
+				<string>A7B936324EAC87B83E35B029156FA05D</string>
+				<string>1B46046A699B5CE50834B03CD16CF91E</string>
+				<string>315AB70F0498F5E23C2C51EF620D712C</string>
+				<string>7AFA2AFD81322441A4F7C8539EDC8CD6</string>
+				<string>5EA2EE7BDDACE89D4DCB4E9B3C23E7B8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/SwiftyTimer</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A2CE98AA01F455A14C8400C134D1898B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>CWNotificationBanner-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A38506CF4700DA06E89C871D8388D83E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2393D1A899C707F79A64672C46ED238F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A584426CE5F604A209462EF8EAF4FCFF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B9BA2BB23DA72E245C07D9C77C898875</string>
+				<string>931974AD0F6EC2292A2968F4A97BBF7D</string>
+				<string>5F47526B4682E1F8005896A216F5A322</string>
+				<string>EF6AC86EF40CC6EA12E772C518ECD645</string>
+				<string>49F356CA9818B4168A68BAED6220051E</string>
+				<string>EA9692C5C254634700DFE03E8FB4A75D</string>
+				<string>1FBFA96F935D6E393A94A129DE70ACD4</string>
+				<string>2446222E82994FDD46948FFD4E7A8B4B</string>
+				<string>E1A10459AA149087450D3934521F3381</string>
+				<string>A039453A59FFAC7C3CD0167C62F1C2C9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-CWNotificationBanner_Tests</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-CWNotificationBanner_Tests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A70CDAD61F90AC503C7D04CC22DA2923</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>A7B936324EAC87B83E35B029156FA05D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.module-map</string>
+			<key>path</key>
+			<string>SwiftyTimer.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A7F9AAC65FC2D87C34EA9D6A5ACB4401</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2CCB712E2B27E50F855555F5092CB445</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>A860359678BB949D2E6AB11FA28183A8</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>CWNotificationBanner.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>AB2D0B30FF8A176E6046114F7DE87F13</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>5D900942FF384E571023D59B515F2892</string>
+			<key>remoteInfo</key>
+			<string>CWNotificationBanner</string>
+		</dict>
+		<key>AD768CFDAA33EBB55AC6458FF3609B71</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIImage+Compare.m</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/Categories/UIImage+Compare.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AEBA7273A59F2B043A31661C1CB1604C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5D3AA6A4A2CAB7C104BC842A15AF394C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Private</string>
+				</array>
+			</dict>
+		</dict>
+		<key>AF7FC73A72DBC49D3161F3E5B8D4FC82</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>2E942A8AE0F1B07457F1715D17E1B708</string>
+				<string>5DB1704234E0EAA101F26E367670C2D2</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>B176B709891A133ECCD309CD312107DF</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>A039453A59FFAC7C3CD0167C62F1C2C9</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CWNotificationBanner_Tests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_CWNotificationBanner_Tests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>B6A3DE7E5E029CA0022243B1264C6D9B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIImage+Compare.h</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/Categories/UIImage+Compare.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B99F6B264C810E5D4CD9B2B478EFC7BC</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>3AED23F1B4382E4DCF0E76AFEB744160</string>
+			<key>buildPhases</key>
+			<array>
+				<string>27D12DA3AC3AEFA99923849D9297CEB0</string>
+				<string>CA608F2C1D4DDDDDF245E9129F951A3A</string>
+				<string>FE583145C81E221F08B30C2770BEE09F</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>CWNotificationBanner-CWNotificationBanner</string>
+			<key>productName</key>
+			<string>CWNotificationBanner-CWNotificationBanner</string>
+			<key>productReference</key>
+			<string>2153E251CEF18C444CD59581461E7538</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle</string>
+		</dict>
+		<key>B9BA2BB23DA72E245C07D9C77C898875</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>BA7FB690F3A08BB1E33865B1F9974E46</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>0E858C8652968E6E0873AB050C4057A8</string>
+				<string>18A361C646871484BE186918D5190A7A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>BD3C7ABB0598A03B729F141633113043</key>
+		<dict>
+			<key>fileRef</key>
+			<string>06AE4001FFDCADEBA4FABAF10346F520</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BE06CB531E1FA398B4396E8560CBDA33</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FBSnapshotTestCasePlatform.m</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/FBSnapshotTestCasePlatform.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BEA53CC379D5A990DF5B337EDEB3AB8F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Example-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C0C51AAFC3C06D4FEFAC776165780D23</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C35A6CB0EA498C36BE235DBC1D3CC5F9</string>
+				<string>A584426CE5F604A209462EF8EAF4FCFF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C0F171EC1CC2583600DD3885</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>EF6C23F1A8015983BBCAAF4A4A89611C</string>
+			<key>remoteInfo</key>
+			<string>SwiftyTimer</string>
+		</dict>
+		<key>C0F171ED1CC2583600DD3885</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>EF6C23F1A8015983BBCAAF4A4A89611C</string>
+			<key>targetProxy</key>
+			<string>C0F171EC1CC2583600DD3885</string>
+		</dict>
+		<key>C0F4E44123574EB4ABA127ED9E685064</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Example.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C0FB87ED8E1EF7B98F66AF90BB6279CC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2153E251CEF18C444CD59581461E7538</string>
+				<string>A860359678BB949D2E6AB11FA28183A8</string>
+				<string>1DC0BD3396B7249421397B6A264E6640</string>
+				<string>8330445823FB5A88E179B9DB4F116C29</string>
+				<string>304E7C449C7188D60B961F3D8BA7F0DB</string>
+				<string>0AD491673A88493EFF7F3D1D70B7C33D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C1B93A1B60EC904B1E2A31ED471BF43A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C28DBDB7EEECFDCC48E61B5BAF0DBC28</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4DA93B9FB63AC3C209709C28CF11361B</string>
+				<string>0A8A917ABF736C931D3DCED83CBEBF68</string>
+				<string>39E6E96A9DFA145E8E97609F58FDD33B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C35A6CB0EA498C36BE235DBC1D3CC5F9</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2A0769F385EEADE6A1745D42CFE3AF2E</string>
+				<string>C8BC40A7BC376E5621FE89DDB706BD5B</string>
+				<string>2BC3866010DF82CEBA4484FB59357981</string>
+				<string>A245694D0A1F4A7FDF3AC254E758236F</string>
+				<string>D0BCA43065608857CCEC7FA9C17ACA48</string>
+				<string>BEA53CC379D5A990DF5B337EDEB3AB8F</string>
+				<string>D42B206BD4F61A4FDA6854CF7D823F80</string>
+				<string>5F25DCD45FC648F38F8DC401CF056129</string>
+				<string>C0F4E44123574EB4ABA127ED9E685064</string>
+				<string>3E7E866FB68BFF15FEA4A88D77A4ED30</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-CWNotificationBanner_Example</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-CWNotificationBanner_Example</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C375530C7888AD82E28E2D1EEDA2EED2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C3A3BB55F8F20AC7C5873082D440B4DE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>FAE5D4824DC21E6D3680505374C88AE0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C5C081A0337FC266B8C37E0D858AB743</key>
+		<dict>
+			<key>fileRef</key>
+			<string>634788A7FCF2E413D0E9217258801B5D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Private</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C734B3E3D956ADCF96CBF8DF</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_CWNotificationBanner.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C8BC40A7BC376E5621FE89DDB706BD5B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.module-map</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Example.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C97426182DB39037AA9ECA93E893C481</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>CWNotificationBanner-CWNotificationBanner</string>
+			<key>target</key>
+			<string>B99F6B264C810E5D4CD9B2B478EFC7BC</string>
+			<key>targetProxy</key>
+			<string>EA57CDCE31F6D49D69CB562EDFC8E28A</string>
+		</dict>
+		<key>C9C7AA3C8E76DDB5EB22C0762DF3AB6B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1121624FB1A15E4863124C209E46BAFD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>CWNotificationBanner</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CA608F2C1D4DDDDDF245E9129F951A3A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>CD3FB7D37E46A5379C926728A416D78E</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D31B096AB4A0164C61B63F0E59AD76C9</string>
+				<string>0528444EFC68619AD1FEB8A7CD4A01BA</string>
+				<string>2393D1A899C707F79A64672C46ED238F</string>
+				<string>853C84AC883B6FC690E82525E7ECB377</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CDA229DD6B8811A659D439B4A9DEDF7F</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>E1A10459AA149087450D3934521F3381</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CWNotificationBanner_Tests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_CWNotificationBanner_Tests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>CDFB0589E122ABFF9E6EE440827916D7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>C0F4E44123574EB4ABA127ED9E685064</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-CWNotificationBanner_Example/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_CWNotificationBanner_Example</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>D0BCA43065608857CCEC7FA9C17ACA48</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Example-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D31B096AB4A0164C61B63F0E59AD76C9</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>D41D8CD98F00B204E9800998ECF8427E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0700</string>
+				<key>LastUpgradeCheck</key>
+				<string>0730</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>5D900942FF384E571023D59B515F2892</key>
+					<dict>
+						<key>DevelopmentTeam</key>
+						<string>N2WM6EN8GQ</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7DB346D0F39D3F0E887471402A8071AB</string>
+			<key>productRefGroup</key>
+			<string>C0FB87ED8E1EF7B98F66AF90BB6279CC</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>5D900942FF384E571023D59B515F2892</string>
+				<string>B99F6B264C810E5D4CD9B2B478EFC7BC</string>
+				<string>772A3FF3D8A39494464ADDC12B7096CF</string>
+				<string>7CBAFD7423520842E2DA80A8EABBDFAB</string>
+				<string>4BEBDDB354B416678057F34951145691</string>
+				<string>EF6C23F1A8015983BBCAAF4A4A89611C</string>
+			</array>
+		</dict>
+		<key>D42B206BD4F61A4FDA6854CF7D823F80</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Example-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D60D7FB6CD569A8E85E464BAF37C4AB0</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>CDA229DD6B8811A659D439B4A9DEDF7F</string>
+				<string>B176B709891A133ECCD309CD312107DF</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>D64DAF27B0B85D73A35F2181A996C2AE</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>5406C486E33BDA850F4FCC715FEC0D70</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D7DB1EB61CE55B124EB1251200D826D4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>FBSnapshotTestController.m</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/FBSnapshotTestController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D9C161892E8BFC171CD99A0B41965934</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>23341802B42464BD3F3F03C893D94E55</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY</key>
+				<string>iPhone Developer</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/CWNotificationBanner/CWNotificationBanner-prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/CWNotificationBanner/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/CWNotificationBanner/CWNotificationBanner.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>CWNotificationBanner</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>SWIFT_OPTIMIZATION_LEVEL</key>
+				<string>-Onone</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>DAA7E654EF0481CBDF89DC46F6C67257</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>SwiftSupport.swift</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/SwiftSupport.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DE378193632A1677FC3AC67D7DD3E6E3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>01C37A59806E6227E2E2F36B34FB6622</string>
+				<string>404FB4530B0302D64445D8784182D6C3</string>
+				<string>57F1C848B1FF345095A47F843CFDC70D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E1A10459AA149087450D3934521F3381</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Tests.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E1ED9851C724376D14931DFC1B43D739</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D31B096AB4A0164C61B63F0E59AD76C9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E3118C3110EEDD0D77E12B31730F731C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5EA2EE7BDDACE89D4DCB4E9B3C23E7B8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E44BA8216CB73A40822467A02D7D847B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B6A3DE7E5E029CA0022243B1264C6D9B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Private</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E45E4E2783D9FE32178E51BA08D3C0F5</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>2DB37220AC01109263246373B69A4992</string>
+				<string>2042B4FAFD20CF99BA15BC6E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>E4A6152D837123E9E2A2CEAB1963BDC5</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>5D900942FF384E571023D59B515F2892</string>
+			<key>remoteInfo</key>
+			<string>CWNotificationBanner</string>
+		</dict>
+		<key>E529CF6315E6EB33FBA413EDC4BD9CF7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C1B93A1B60EC904B1E2A31ED471BF43A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E5433869AEBADC0AADEA47571630C1DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>2446222E82994FDD46948FFD4E7A8B4B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E5EFBFEA24204492935B2FB2BA7D21B6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>02630BC7B7977F8881939AAFC809FFF0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E64A8AC222F14641EB6D09879F890C7D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.swift</string>
+			<key>name</key>
+			<string>SwiftyTimer.swift</string>
+			<key>path</key>
+			<string>Sources/SwiftyTimer.swift</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E6598C946CB8C42DFF6CB23648937553</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E529CF6315E6EB33FBA413EDC4BD9CF7</string>
+				<string>BD3C7ABB0598A03B729F141633113043</string>
+				<string>94FDCD720E559DF4C535B3A8E93080C3</string>
+				<string>58CA52BCED9F6E2A9CCE4DF19E873D3E</string>
+				<string>8DECB970785FCBAB4A6315DAA0DB0DF2</string>
+				<string>E5EFBFEA24204492935B2FB2BA7D21B6</string>
+				<string>500CFFB619BA25FB57B6AF48F8CCD8F3</string>
+				<string>3C85E62EBD0D660C3DB557FABF9B8E10</string>
+				<string>90B7E2F40E17730F3E28449559B458E0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>EA57CDCE31F6D49D69CB562EDFC8E28A</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>B99F6B264C810E5D4CD9B2B478EFC7BC</string>
+			<key>remoteInfo</key>
+			<string>CWNotificationBanner-CWNotificationBanner</string>
+		</dict>
+		<key>EA9692C5C254634700DFE03E8FB4A75D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Tests-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EC947D1A6660856D1B22F336327C4959</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>SwiftyTimer</string>
+			<key>target</key>
+			<string>EF6C23F1A8015983BBCAAF4A4A89611C</string>
+			<key>targetProxy</key>
+			<string>120B1BBD742A173507AF09324839F673</string>
+		</dict>
+		<key>EF6AC86EF40CC6EA12E772C518ECD645</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-CWNotificationBanner_Tests-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF6C23F1A8015983BBCAAF4A4A89611C</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>AF7FC73A72DBC49D3161F3E5B8D4FC82</string>
+			<key>buildPhases</key>
+			<array>
+				<string>1C0C12FCAAD9F0A1FE2F639669E89572</string>
+				<string>2E42DC0CCEF918729BAA641C2B27C005</string>
+				<string>3C935B409A6D4A5A60675BBA45F98BF0</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>SwiftyTimer</string>
+			<key>productName</key>
+			<string>SwiftyTimer</string>
+			<key>productReference</key>
+			<string>0AD491673A88493EFF7F3D1D70B7C33D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>F274CF76CAFEA30300FC02D4B61E79AD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIImage+Snapshot.m</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase/Categories/UIImage+Snapshot.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F92946B4224918563AA8562CCDC04092</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>FBSnapshotTestCase-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FAE5D4824DC21E6D3680505374C88AE0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>49F356CA9818B4168A68BAED6220051E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FAE975927BCBE466CF67844E83810792</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C28DBDB7EEECFDCC48E61B5BAF0DBC28</string>
+				<string>4B97DCA67AC4E4136C53673D3C56ED9D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FB45FFD90572718D82AB9092B750F0CA</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<string>RELEASE=1</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>FBBC9C639BE489C1930862DE3970C257</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5F25DCD45FC648F38F8DC401CF056129</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>FCF19089A1F3897EDAADF596E0348211</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E5433869AEBADC0AADEA47571630C1DB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>FDCF5EFC95C413E5DCF5133D3DFC4170</key>
+		<dict>
+			<key>fileRef</key>
+			<string>853C84AC883B6FC690E82525E7ECB377</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FE583145C81E221F08B30C2770BEE09F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>FECA10DFB2763720A3EAE03CD2E55F46</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>04A6773875E420B994FD70378F132CE5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D41D8CD98F00B204E9800998ECF8427E</string>
+</dict>
+</plist>
