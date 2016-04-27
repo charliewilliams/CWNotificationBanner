@@ -13,31 +13,50 @@ public func ==(lhs: Message, rhs: Message) -> Bool {
     return lhs.text == rhs.text && lhs.date == rhs.date
 }
 
+public enum PushPayloadKey: String {
+    case aps = "aps"
+    case alert = "alert"
+    case action = "a"
+    case duration = "d"
+}
+
 public typealias Action = (() -> ())
 
 public struct Message : Equatable {
     public let text: String
-    public let action: Action?
+    public var actionKey: String?
     public let duration: NSTimeInterval
     private let date: NSDate
     private static let defaultDisplayTime: NSTimeInterval = 5
+    private static var actions = [String:Action]()
     
-    public init(text: String, action: Action? = nil, displayDuration: NSTimeInterval = defaultDisplayTime) {
+    public init(text: String, displayDuration: NSTimeInterval = defaultDisplayTime) {
         self.text = text
-        self.action = action
         self.date = NSDate()
         self.duration = displayDuration
     }
     
     public init?(pushPayload: [NSObject : AnyObject]) {
         
-        guard let text = pushPayload["aps"]?["alert"] as? String else { return nil }
+        guard let text = pushPayload[PushPayloadKey.aps.rawValue]?[PushPayloadKey.alert.rawValue] as? String else { return nil }
         self.text = text
-        
-        // TODO add support for actions
-        self.action = {}
-        self.duration = pushPayload["d"] as? NSTimeInterval ?? Message.defaultDisplayTime
+        self.actionKey = pushPayload[PushPayloadKey.action.rawValue] as? String
+        self.duration = pushPayload[PushPayloadKey.duration.rawValue] as? NSTimeInterval ?? Message.defaultDisplayTime
         self.date = NSDate()
+    }
+    
+    public static func registerAction(action: Action, forKey key: String) {
+        actions[key] = action
+    }
+    
+    public static func registerActionsAndKeys(actionsAndKeys:[String:Action]) {
+        for (key, action) in actionsAndKeys {
+            actions[key] = action
+        }
+    }
+    
+    public static func unregisterActionForKey(key: String) {
+        actions.removeValueForKey(key)
     }
     
     public func isEqual(other: AnyObject?) -> Bool {
@@ -159,7 +178,10 @@ public class NotificationBanner: UIToolbar {
     }
 
     @IBAction func popoverTapped(sender: UIBarButtonItem) {
-        NotificationBanner.currentMessage?.action?()
+        if let key = NotificationBanner.currentMessage?.actionKey,
+            let action = Message.actions[key] {
+            action()
+        }
     }
     
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
