@@ -13,6 +13,13 @@ public func ==(lhs: Message, rhs: Message) -> Bool {
     return lhs.text == rhs.text && lhs.date == rhs.date
 }
 
+public enum MessageType: String {
+    case NoConnection = "No network connection."
+    case ServerError = "Error connecting to the server."
+    case Unspecified = "We couldn't complete that request."
+    case NotLoggedIn = "Error: Please log out and log in again to continue."
+}
+
 public enum PushPayloadKey: String {
     case aps = "aps"
     case alert = "alert"
@@ -27,13 +34,15 @@ public struct Message : Equatable {
     public var actionKey: String?
     public let duration: NSTimeInterval
     private let date: NSDate
+    private let isError: Bool
     private static let defaultDisplayTime: NSTimeInterval = 5
     private static var actions = [String:Action]()
     
-    public init(text: String, displayDuration: NSTimeInterval = defaultDisplayTime) {
+    public init(text: String, displayDuration: NSTimeInterval = defaultDisplayTime, isError error: Bool = false) {
         self.text = text
         self.date = NSDate()
         self.duration = displayDuration
+        self.isError = error
     }
     
     public init?(pushPayload: [NSObject : AnyObject]) {
@@ -43,6 +52,7 @@ public struct Message : Equatable {
         self.actionKey = pushPayload[PushPayloadKey.action.rawValue] as? String
         self.duration = pushPayload[PushPayloadKey.duration.rawValue] as? NSTimeInterval ?? Message.defaultDisplayTime
         self.date = NSDate()
+        self.isError = false
     }
     
     public static func registerAction(action: Action, forKey key: String) {
@@ -76,10 +86,24 @@ public class NotificationBanner: UIToolbar {
             return
         }
         
+        if let timer = currentMessageTimer,
+            let interruptedMessage = pendingMessages.last where timer.valid {
+            let index = pendingMessages.count >= 2 ? pendingMessages.count - 2 : 0
+            pendingMessages.insert(interruptedMessage, atIndex: index)
+        }
+        
+        // Don't interrupt an error to show a non-error
+        if let currentMessage = pendingMessages.last where currentMessage.isError {
+            let index = pendingMessages.count >= 2 ? pendingMessages.count - 2 : 0
+            pendingMessages.insert(message, atIndex: index)
+            return
+        }
+        
         if !pendingMessages.contains(message) {
             pendingMessages.append(message)
         }
         
+        sharedToolbar.styleForError(message.isError)
         sharedToolbar.frame = messageHiddenFrame
         sharedToolbar.messageLabel.text = message.text
         
@@ -92,12 +116,22 @@ public class NotificationBanner: UIToolbar {
             
             pendingMessages = pendingMessages.filter { $0 != message }
             
-            hideCurrentMessage(true) {
+            hideCurrentMessage(true, alreadyRemoved: true) {
                 if let next = pendingMessages.last {
                     showMessage(next)
                 }
             }
         }
+    }
+    
+    public static func showErrorMessage(messageType: MessageType, code: Int? = nil) {
+        
+        var text = messageType.rawValue
+        if let code = code where code != 0 {
+            text = String(text.characters.dropLast()) + ": \(code)"
+        }
+        let message = Message(text: text, isError: true)
+        showMessage(message)
     }
     
     public static func cancelMessage(toCancel: Message, animated: Bool = true) {
@@ -128,6 +162,7 @@ public class NotificationBanner: UIToolbar {
     }
 
     @IBOutlet private weak var messageLabel: UILabel!
+    private var underStatusBarView: UIView!
     public static var sharedToolbar: NotificationBanner = {
         let bundle = NSBundle(forClass: NotificationBanner.classForCoder())
         let t = bundle.loadNibNamed(String(NotificationBanner), owner: nil, options: nil).first as! NotificationBanner
@@ -155,9 +190,9 @@ public class NotificationBanner: UIToolbar {
         super.init(coder: aDecoder)
     }
     
-    private static func hideCurrentMessage(animated: Bool, completion: (()->())? = nil) {
+    private static func hideCurrentMessage(animated: Bool, alreadyRemoved: Bool = false, completion: (()->())? = nil) {
         
-        if pendingMessages.count > 0 {
+        if !alreadyRemoved && pendingMessages.count > 0 {
             pendingMessages.removeLast()
         }
         
@@ -192,6 +227,19 @@ public class NotificationBanner: UIToolbar {
         }
     }
     
+    private let errorBackgroundColor = UIColor(white: 0.2, alpha: 1.0)
+    private let regularBackgroundColor = UIColor(red: 51.0/255.0, green: 204.0/255.0, blue: 51.0/255.0, alpha: 1)
+    override public var barTintColor: UIColor? {
+        didSet {
+            underStatusBarView.backgroundColor = barTintColor?.colorWithAlphaComponent(0.85)
+        }
+    }
+    
+    private func styleForError(isError: Bool) {
+        barTintColor = isError ? errorBackgroundColor : regularBackgroundColor
+        messageLabel.textColor = .whiteColor()
+    }
+    
     private func hideHairlineBorder() {
         for view in subviews {
             if let imageView = view as? UIImageView {
@@ -208,5 +256,6 @@ public class NotificationBanner: UIToolbar {
         let views = ["underStatusBar":underStatusBar]
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[underStatusBar]|", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
         addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(-20)-[underStatusBar(20)]", options: NSLayoutFormatOptions(rawValue: 0), metrics: nil, views: views))
+        underStatusBarView = underStatusBar
     }
 }
