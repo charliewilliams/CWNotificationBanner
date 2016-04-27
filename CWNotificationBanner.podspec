@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CWNotificationBanner"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "You want a nice iOS Push Notification UI to display popover banners? Here it is."
 
 # This description is used to generate tags and improve search results.
