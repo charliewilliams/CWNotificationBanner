@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CWNotificationBanner"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "You want a nice iOS Push Notification UI to display popover banners? Here it is."
 
 # This description is used to generate tags and improve search results.
@@ -37,5 +37,5 @@ Pod::Spec.new do |s|
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
-  s.dependency 'SwiftyTimer', '~> 1.4'
+  s.dependency = 'SwiftyTimer', '~> 1.4'
 end
