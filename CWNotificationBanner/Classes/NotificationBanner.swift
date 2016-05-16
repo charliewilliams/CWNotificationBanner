@@ -169,7 +169,7 @@ public class NotificationBanner: UIToolbar {
         t.hideHairlineBorder()
         t.barTintColor = UIColor(white: 0.2, alpha: 0.4)
         t.addStatusBarBackingView()
-        UIApplication.sharedApplication().keyWindow!.addSubview(t)
+        UIApplication.sharedApplication().keyWindow?.addSubview(t)
         return t
     }()
     
@@ -231,7 +231,7 @@ public class NotificationBanner: UIToolbar {
     private let regularBackgroundColor = UIColor(red: 51.0/255.0, green: 204.0/255.0, blue: 51.0/255.0, alpha: 1)
     override public var barTintColor: UIColor? {
         didSet {
-            underStatusBarView.backgroundColor = barTintColor?.colorWithAlphaComponent(0.85)
+            underStatusBarView?.backgroundColor = barTintColor?.colorWithAlphaComponent(0.85)
         }
     }
     
