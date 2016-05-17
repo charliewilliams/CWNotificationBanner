@@ -79,8 +79,19 @@ public struct Message: Equatable {
     }
 }
 
-public class NotificationBanner: UIToolbar {
-
+public class NotificationBanner: UIView {
+    
+    public static var animateDuration: NSTimeInterval = 0.3
+    public static var fallbackToBannerOnMainWindow: Bool = false
+    public var errorBackgroundColor = UIColor(white: 0.2, alpha: 1.0)
+    public var regularBackgroundColor = UIColor.greenColor()
+    
+    override public var backgroundColor: UIColor! {
+        didSet {
+            underStatusBarView?.backgroundColor = backgroundColor?.colorWithAlphaComponent(0.85)
+        }
+    }
+    
     public static func showMessage(message: Message) {
         
         guard NSThread.mainThread() == NSThread.currentThread() else {
@@ -166,14 +177,26 @@ public class NotificationBanner: UIToolbar {
     }
 
     @IBOutlet private weak var messageLabel: UILabel!
+    @IBOutlet weak var messageButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
     private var underStatusBarView: UIView!
     public static var sharedToolbar: NotificationBanner = {
-        let bundle = NSBundle(forClass: NotificationBanner.classForCoder())
-        let t = bundle.loadNibNamed(String(NotificationBanner), owner: nil, options: nil).first as! NotificationBanner
-        t.hideHairlineBorder()
-        t.barTintColor = UIColor(white: 0.2, alpha: 0.4)
-        t.addStatusBarBackingView()
-        UIApplication.sharedApplication().keyWindow!.addSubview(t)
+        
+        let t = NSBundle.mainBundle().loadNibNamed(String(NotificationBanner), owner: nil, options: nil).first as! NotificationBanner
+        t.messageButton.addTarget(t, action: #selector(NotificationBanner.messageLabelTapped(_:)), forControlEvents: .TouchUpInside)
+        t.closeButton.addTarget(t, action: #selector(NotificationBanner.closeButtonTapped(_:)), forControlEvents: .TouchUpInside)
+        
+        NSNotificationCenter.defaultCenter().addObserverForName(NotificationBannerShouldDisplayErrorNotification, object: nil, queue: .mainQueue(), usingBlock: { (notification:NSNotification) in
+            
+            if let error = notification.object as? NSError {
+                NotificationBanner.showErrorMessage(error.localizedDescription)
+            } else if let errorText = notification.object as? String {
+                NotificationBanner.showErrorMessage(errorText)
+            } else {
+                NotificationBanner.showErrorMessage(.Unspecified)
+            }
+        })
+        
         return t
     }()
     
@@ -181,13 +204,20 @@ public class NotificationBanner: UIToolbar {
     private static var currentMessage: Message?
     private static var pendingMessages = [Message]()
     
-    private static let animateDuration: NSTimeInterval = 0.3
     private class var messageShownFrame: CGRect {
-        let y = UIApplication.sharedApplication().statusBarHidden ? 0 : UIApplication.sharedApplication().statusBarFrame.height
-        return CGRect(x: 0, y: y, width: sharedToolbar.frame.width, height: sharedToolbar.frame.height)
+        
+        let y: CGFloat
+        
+        if let navigationBar = activeNavigationController?.navigationBar where sharedToolbar.superview == navigationBar {
+            y = navigationBar.frame.height
+        } else {
+            y = UIApplication.sharedApplication().statusBarHidden ? 0 : UIApplication.sharedApplication().statusBarFrame.height
+        }
+        
+        return CGRect(x: 0, y: y, width: UIScreen.mainScreen().bounds.width, height: sharedToolbar.frame.height)
     }
     private class var messageHiddenFrame: CGRect {
-        return CGRect(x: 0, y: -sharedToolbar.frame.height, width: sharedToolbar.frame.width, height: sharedToolbar.frame.height)
+        return CGRect(x: 0, y: -sharedToolbar.frame.height, width: UIScreen.mainScreen().bounds.width, height: sharedToolbar.frame.height)
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -215,15 +245,15 @@ public class NotificationBanner: UIToolbar {
         currentMessageTimer = nil
         currentMessage = nil
     }
-
-    @IBAction func popoverTapped(sender: UIBarButtonItem) {
+    
+    @IBAction @objc private func messageLabelTapped(sender: UIButton) {
         if let key = NotificationBanner.currentMessage?.actionKey,
             let action = Message.actions[key] {
             action()
         }
     }
     
-    @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
+    @IBAction @objc private func closeButtonTapped(sender: UIButton) {
         NotificationBanner.hideCurrentMessage(true) {
             if let next = NotificationBanner.pendingMessages.last {
                 NotificationBanner.showMessage(next)
@@ -231,30 +261,14 @@ public class NotificationBanner: UIToolbar {
         }
     }
     
-    private let errorBackgroundColor = UIColor(white: 0.2, alpha: 1.0)
-    private let regularBackgroundColor = UIColor(red: 51.0/255.0, green: 204.0/255.0, blue: 51.0/255.0, alpha: 1)
-    override public var barTintColor: UIColor? {
-        didSet {
-            underStatusBarView.backgroundColor = barTintColor?.colorWithAlphaComponent(0.85)
-        }
-    }
-    
     private func styleForError(isError: Bool) {
-        barTintColor = isError ? errorBackgroundColor : regularBackgroundColor
+        backgroundColor = isError ? errorBackgroundColor : regularBackgroundColor
         messageLabel.textColor = .whiteColor()
-    }
-    
-    private func hideHairlineBorder() {
-        for view in subviews {
-            if let imageView = view as? UIImageView {
-                imageView.hidden = true
-            }
-        }
     }
     
     private func addStatusBarBackingView() {
         let underStatusBar = UIView(frame: CGRectZero)
-        underStatusBar.backgroundColor = UIColor(white: 0.2, alpha: 0.85)
+        underStatusBar.backgroundColor = backgroundColor.colorWithAlphaComponent(0.85) //UIColor(white: 0.2, alpha: 0.85)
         underStatusBar.translatesAutoresizingMaskIntoConstraints = false
         addSubview(underStatusBar)
         let views = ["underStatusBar":underStatusBar]
