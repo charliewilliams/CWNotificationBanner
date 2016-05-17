@@ -9,6 +9,18 @@
 import CWNotificationBanner
 
 class ViewController: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let tapAction:MessageAction = { Void in
+            
+            let alert = UIAlertController(title: "Tapped the alert banner", message: "Popups are a terrible user experience, eh?", preferredStyle: .Alert)
+            self.showViewController(alert, sender: nil)
+        }
+        
+        Message.registerAction(tapAction, forKey: "tapAction")
+    }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)

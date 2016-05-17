@@ -27,7 +27,7 @@ public enum PushPayloadKey: String {
     case duration = "d"
 }
 
-public typealias Action = (() -> ())
+public typealias MessageAction = (() -> ())
 
 public struct Message : Equatable {
     public let text: String
@@ -36,7 +36,7 @@ public struct Message : Equatable {
     private let date: NSDate
     private let isError: Bool
     private static let defaultDisplayTime: NSTimeInterval = 5
-    private static var actions = [String:Action]()
+    private static var actions = [String:MessageAction]()
     
     public init(text: String, displayDuration: NSTimeInterval = defaultDisplayTime, isError error: Bool = false) {
         self.text = text
@@ -55,11 +55,11 @@ public struct Message : Equatable {
         self.isError = false
     }
     
-    public static func registerAction(action: Action, forKey key: String) {
+    public static func registerAction(action: MessageAction, forKey key: String) {
         actions[key] = action
     }
     
-    public static func registerActionsAndKeys(actionsAndKeys:[String:Action]) {
+    public static func registerActionsAndKeys(actionsAndKeys:[String:MessageAction]) {
         for (key, action) in actionsAndKeys {
             actions[key] = action
         }
