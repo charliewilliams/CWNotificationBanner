@@ -1,15 +1,10 @@
 PODS:
-  - CWNotificationBanner (0.1.0)
-  - FBSnapshotTestCase (2.1.0):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.0)
-  - FBSnapshotTestCase/Core (2.1.0)
-  - FBSnapshotTestCase/SwiftSupport (2.1.0):
-    - FBSnapshotTestCase/Core
+  - CWNotificationBanner (0.1.2):
+    - SwiftyTimer (~> 1.4)
   - SwiftyTimer (1.4.0)
 
 DEPENDENCIES:
   - CWNotificationBanner (from `../`)
-  - FBSnapshotTestCase
   - SwiftyTimer (~> 1.4)
 
 EXTERNAL SOURCES:
@@ -17,8 +12,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  CWNotificationBanner: dff7bec3c4c0d464a680fcda29795296018fad95
-  FBSnapshotTestCase: 366ecd378511d7716c79991cd8067d1eed23578d
+  CWNotificationBanner: 732eef6a4ede9a477ac273bd26e60e1b3c2d132d
   SwiftyTimer: db4458cfaf67fc71e16ad6e4637c60b86f76a649
 
 COCOAPODS: 0.39.0
