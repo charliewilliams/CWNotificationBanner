@@ -175,11 +175,46 @@ public class NotificationBanner: UIView {
         hideCurrentMessage(animated)
         pendingMessages = []
     }
-
+    
+    private static var keyWindow: UIWindow {
+        return UIApplication.sharedApplication().keyWindow!
+    }
+    private static var activeNavigationController: UINavigationController? {
+        let rootVC = keyWindow.rootViewController!
+        
+        if let navController = rootVC as? UINavigationController {
+            return navController
+        }
+        else if let navController = rootVC.navigationController {
+            return navController
+        }
+        else if let tabBarController = rootVC as? UITabBarController {
+            
+            let selectedVC = tabBarController.selectedViewController!
+            if let navController = selectedVC as? UINavigationController {
+                
+                if let visibleViewController = navController.visibleViewController,
+                    let visibleNavController = visibleViewController.navigationController {
+                    return visibleNavController
+                }
+                else { return navController }
+            }
+            else if let navController = selectedVC.navigationController {
+                return navController
+            }
+        }
+        else if let navController = rootVC.childViewControllers.first?.navigationController {
+            return navController
+        }
+        
+        return nil
+    }
+    
     @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet weak var messageButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
     private var underStatusBarView: UIView!
+    
     public static var sharedToolbar: NotificationBanner = {
         
         let t = NSBundle.mainBundle().loadNibNamed(String(NotificationBanner), owner: nil, options: nil).first as! NotificationBanner
