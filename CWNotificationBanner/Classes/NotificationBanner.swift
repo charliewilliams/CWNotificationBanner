@@ -101,17 +101,18 @@ public class NotificationBanner: UIView {
             return
         }
         
-        if let timer = currentMessageTimer,
-            let interruptedMessage = pendingMessages.last where timer.valid {
-            let index = pendingMessages.count >= 2 ? pendingMessages.count - 2 : 0
-            pendingMessages.insert(interruptedMessage, atIndex: index)
-        }
-        
         // Don't interrupt an error to show a non-error
         if let currentMessage = pendingMessages.last where currentMessage.isError {
             let index = pendingMessages.count >= 2 ? pendingMessages.count - 2 : 0
             pendingMessages.insert(message, atIndex: index)
             return
+        }
+        
+        // If we're interrupting a message to show an error, re-insert the old message so we show it again
+        if let timer = currentMessageTimer,
+            let interruptedMessage = pendingMessages.last where timer.valid {
+            let index = pendingMessages.count >= 2 ? pendingMessages.count - 2 : 0
+            pendingMessages.insert(interruptedMessage, atIndex: index)
         }
         
         if !pendingMessages.contains(message) {
