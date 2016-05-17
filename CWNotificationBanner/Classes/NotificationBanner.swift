@@ -154,14 +154,20 @@ public class NotificationBanner: UIView {
         }
     }
     
-    public static func showErrorMessage(messageType: MessageType, code: Int? = nil) {
+    public static func showErrorMessage(messageType: MessageType, code: Int? = nil, duration: NSTimeInterval = Message.defaultDisplayTime) -> Message {
+        return showErrorMessage(messageType.rawValue, code: code, duration: duration)
+    }
+    
+    public static func showErrorMessage(text: String, code: Int? = nil, duration: NSTimeInterval = Message.defaultDisplayTime) -> Message {
         
-        var text = messageType.rawValue
+        var text = text
         if let code = code where code != 0 {
             text = String(text.characters.dropLast()) + ": \(code)"
         }
-        let message = Message(text: text, isError: true)
+        let message = Message(text: text, displayDuration: duration, isError: true)
         showMessage(message)
+        
+        return message
     }
     
     public static func cancelMessage(toCancel: Message, animated: Bool = true) {
