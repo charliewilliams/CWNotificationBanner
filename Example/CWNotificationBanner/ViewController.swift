@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        let message = Message(text: "Hello there", action: nil)
+        let message = Message(text: "Hello there")
         
         NotificationBanner.showMessage(message)
     }
@@ -33,9 +33,7 @@ class ViewController: UIViewController {
     var count: Int = 0
     @IBAction func sendPushPressed(sender: UIButton) {
         
-        let message = Message(text: "Hello there, this is message \(count)", action: {
-            
-        })
+        let message = Message(text: "Hello there, this is message \(count)", actionKey: "tapAction")
         
         NotificationBanner.showMessage(message)
         

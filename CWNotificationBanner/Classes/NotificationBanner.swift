@@ -9,6 +9,8 @@
 import UIKit
 import SwiftyTimer
 
+public let NotificationBannerShouldDisplayErrorNotification = "NotificationBannerShouldDisplayErrorNotification"
+
 public func ==(lhs: Message, rhs: Message) -> Bool {
     return lhs.text == rhs.text && (lhs.date == rhs.date || (lhs.isError && rhs.isError))
 }
@@ -29,29 +31,31 @@ public enum PushPayloadKey: String {
 
 public typealias MessageAction = (() -> ())
 
-public struct Message : Equatable {
+public struct Message: Equatable {
     public let text: String
-    public var actionKey: String?
-    public let duration: NSTimeInterval
     private let date: NSDate
+    public let duration: NSTimeInterval
+    public var actionKey: String?
     private let isError: Bool
     private static let defaultDisplayTime: NSTimeInterval = 5
     private static var actions = [String:MessageAction]()
     
-    public init(text: String, displayDuration: NSTimeInterval = defaultDisplayTime, isError error: Bool = false) {
+    public init(text: String, displayDuration: NSTimeInterval = defaultDisplayTime, actionKey: String? = nil, isError error: Bool = false) {
         self.text = text
         self.date = NSDate()
         self.duration = displayDuration
+        self.actionKey = actionKey
         self.isError = error
     }
     
     public init?(pushPayload: [NSObject : AnyObject]) {
         
         guard let text = pushPayload[PushPayloadKey.aps.rawValue]?[PushPayloadKey.alert.rawValue] as? String else { return nil }
+        
         self.text = text
+        self.date = NSDate()
         self.actionKey = pushPayload[PushPayloadKey.action.rawValue] as? String
         self.duration = pushPayload[PushPayloadKey.duration.rawValue] as? NSTimeInterval ?? Message.defaultDisplayTime
-        self.date = NSDate()
         self.isError = false
     }
     
