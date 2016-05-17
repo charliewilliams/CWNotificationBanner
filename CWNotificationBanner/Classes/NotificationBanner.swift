@@ -123,7 +123,21 @@ public class NotificationBanner: UIView {
         sharedToolbar.frame = messageHiddenFrame
         sharedToolbar.messageLabel.text = message.text
         
-        UIView.animateWithDuration(animateDuration) { 
+        if let navController = activeNavigationController,
+            let navBar = navController.navigationBar as? NavigationBar {
+            navBar.extraView = sharedToolbar
+            navController.navigationBar.insertSubview(sharedToolbar, atIndex: 0)
+        }
+        else if fallbackToBannerOnMainWindow {
+            keyWindow.rootViewController?.view.addSubview(sharedToolbar)
+        }
+        else {
+            return
+        }
+        
+        currentMessage = message
+        
+        UIView.animateWithDuration(animateDuration) {
             sharedToolbar.frame = messageShownFrame
         }
         
