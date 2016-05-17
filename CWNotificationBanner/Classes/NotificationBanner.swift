@@ -10,7 +10,7 @@ import UIKit
 import SwiftyTimer
 
 public func ==(lhs: Message, rhs: Message) -> Bool {
-    return lhs.text == rhs.text && lhs.date == rhs.date
+    return lhs.text == rhs.text && (lhs.date == rhs.date || (lhs.isError && rhs.isError))
 }
 
 public enum MessageType: String {
