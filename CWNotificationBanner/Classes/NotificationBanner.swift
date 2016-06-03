@@ -317,9 +317,7 @@ public class NotificationBanner: UIView {
         }
     }
     
-    private let errorBackgroundColor = UIColor(white: 0.2, alpha: 1.0)
-    private let regularBackgroundColor = UIColor(red: 51.0/255.0, green: 204.0/255.0, blue: 51.0/255.0, alpha: 1)
-    override public var barTintColor: UIColor? {
+    public var barTintColor: UIColor? {
         didSet {
             underStatusBarView?.backgroundColor = barTintColor?.colorWithAlphaComponent(0.85)
         }
