@@ -1,6 +1,6 @@
 import UIKit
 import XCTest
-import CWNotificationBanner
+//import CWNotificationBanner
 
 class Tests: XCTestCase {
     
