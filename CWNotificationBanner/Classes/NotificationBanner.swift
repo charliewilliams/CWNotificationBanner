@@ -242,7 +242,8 @@ public class NotificationBanner: UIView {
     
     public static var sharedToolbar: NotificationBanner = {
         
-        let t = NSBundle.mainBundle().loadNibNamed(String(NotificationBanner), owner: nil, options: nil).first as! NotificationBanner
+        let b = NSBundle(forClass: NotificationBanner.classForCoder())
+        let t = b.loadNibNamed(String(NotificationBanner), owner: nil, options: nil).first as! NotificationBanner
         t.messageButton.addTarget(t, action: #selector(NotificationBanner.messageLabelTapped(_:)), forControlEvents: .TouchUpInside)
         t.closeButton.addTarget(t, action: #selector(NotificationBanner.closeButtonTapped(_:)), forControlEvents: .TouchUpInside)
         
