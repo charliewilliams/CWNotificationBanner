@@ -9,10 +9,12 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   CWNotificationBanner:
-    :path: "../"
+    :path: ../
 
 SPEC CHECKSUMS:
   CWNotificationBanner: 732eef6a4ede9a477ac273bd26e60e1b3c2d132d
   SwiftyTimer: db4458cfaf67fc71e16ad6e4637c60b86f76a649
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: d426374d852e1fc51424a2eefcecd99960fc34bf
+
+COCOAPODS: 1.0.1
