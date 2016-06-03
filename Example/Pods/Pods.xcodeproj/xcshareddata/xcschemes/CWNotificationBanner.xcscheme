@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6E24633B2CAD66691CB0F024CCAB7A46"
-               BuildableName = "Pods_CWNotificationBanner.framework"
-               BlueprintName = "Pods-CWNotificationBanner"
+               BlueprintIdentifier = "61F4B5D704E33984BF81404765E48B99"
+               BuildableName = "CWNotificationBanner.framework"
+               BlueprintName = "CWNotificationBanner"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6E24633B2CAD66691CB0F024CCAB7A46"
-            BuildableName = "Pods_CWNotificationBanner.framework"
-            BlueprintName = "Pods-CWNotificationBanner"
+            BlueprintIdentifier = "61F4B5D704E33984BF81404765E48B99"
+            BuildableName = "CWNotificationBanner.framework"
+            BlueprintName = "CWNotificationBanner"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

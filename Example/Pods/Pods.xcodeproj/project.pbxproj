@@ -13,7 +13,6 @@
 		22C6F2CA79244CB8AE867FDFEA25B080 /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275A0C33B9EAD66D25135A83687B9DB7 /* SwiftyTimer.framework */; };
 		2F05B41E41DE9AD189FB071438BEA428 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0378D6F5548C7C2B84987F5949D5043E /* Foundation.framework */; };
 		3EFAFEF4A72A6A0F78BE3F053690EF2D /* CWNotificationBanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50E8B71A68453E460B7E9CD24DB3D6F2 /* CWNotificationBanner-dummy.m */; };
-		4FDB60ED823219F4095D9331 /* Pods_CWNotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9D2E2945B94C20D532AA1C /* Pods_CWNotificationBanner.framework */; };
 		6F7B1ECF0862C07F8AC62F5FEC1F1079 /* NotificationBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C9957556639AE58914A9D33692196C /* NotificationBanner.swift */; };
 		78C90991DE3F7D56282E16528FDBB13E /* CWNotificationBanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9826E45D36DB8918618A013ABE0B3F8 /* CWNotificationBanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8BB2DAF745D178F8865BE48BDCFFD6A1 /* Pods-CWNotificationBanner_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4BF2DC443D63F2D0C546AF56742452 /* Pods-CWNotificationBanner_Example-dummy.m */; };
@@ -23,6 +22,7 @@
 		C317C4ADBD0D59601BD0CC98F69D47AD /* CWNotificationBanner.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D11FE5289455B4CEC32F6B4D8586C8F9 /* CWNotificationBanner.bundle */; };
 		C53E5CF6E48952FD0DF8A7C4B96261EF /* SwiftyTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 989C58335F27808DA782DBFCD15008D6 /* SwiftyTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC73960E6F4106E390AABED79F086969 /* Pods-CWNotificationBanner_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A44A5B53A034BD426051E89C34EBDB04 /* Pods-CWNotificationBanner_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D28230C462F4F9A56CE49706 /* Pods_CWNotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9D2E2945B94C20D532AA1C /* Pods_CWNotificationBanner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +101,7 @@
 			files = (
 				2F05B41E41DE9AD189FB071438BEA428 /* Foundation.framework in Frameworks */,
 				22C6F2CA79244CB8AE867FDFEA25B080 /* SwiftyTimer.framework in Frameworks */,
-				4FDB60ED823219F4095D9331 /* Pods_CWNotificationBanner.framework in Frameworks */,
+				D28230C462F4F9A56CE49706 /* Pods_CWNotificationBanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +355,7 @@
 				611D907AE2CDA1EA8D7A4A8713772E3C /* Frameworks */,
 				5F449A524A4CFE50D6ACD6631D237A11 /* Resources */,
 				909A1B776865019C9F8E6ECE29037008 /* Headers */,
-				B94C2FCF5103B8415BF8451A /* [CP] Copy Pods Resources */,
+				EA1759F72DB281FF0DE54844 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -392,9 +392,9 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0730;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "_Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -448,7 +448,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		B94C2FCF5103B8415BF8451A /* [CP] Copy Pods Resources */ = {
+		EA1759F72DB281FF0DE54844 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -660,6 +660,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = SwiftyTimer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -678,6 +679,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/CWNotificationBanner/ResourceBundle-CWNotificationBanner-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = CWNotificationBanner;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -695,6 +697,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/CWNotificationBanner/ResourceBundle-CWNotificationBanner-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = CWNotificationBanner;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -761,6 +764,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CWNotificationBanner/CWNotificationBanner.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = CWNotificationBanner;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -790,6 +794,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/CWNotificationBanner/CWNotificationBanner.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = CWNotificationBanner;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -820,6 +825,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SwiftyTimer/SwiftyTimer.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_BUNDLE_IDENTIFIER}";
 				PRODUCT_NAME = SwiftyTimer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -833,7 +839,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "_Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				47BEF9D903506B003EA5C2B249729489 /* Debug */,

@@ -39,6 +39,7 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6DFAECC2B80F5F69E010611C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C023AB8F1D02080100E40782 /* CWNotificationBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CWNotificationBanner.framework; path = "../../../Library/Developer/Xcode/DerivedData/CWNotificationBanner-bvkbdapghvnuytgdwjgpysloevhb/Build/Products/Debug-iphonesimulator/CWNotificationBanner/CWNotificationBanner.framework"; sourceTree = "<group>"; };
 		EF9D00D4ED63B55FF900B1ED /* Pods-CWNotificationBanner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F2A387C95636EF0FC5F3AE71 /* Pods-CWNotificationBanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FF2F428BDA961144EC15D44D /* Pods_CWNotificationBanner_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWNotificationBanner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +136,7 @@
 		9E5A7FFAA89A32585CF214FE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C023AB8F1D02080100E40782 /* CWNotificationBanner.framework */,
 				FF2F428BDA961144EC15D44D /* Pods_CWNotificationBanner_Example.framework */,
 			);
 			name = Frameworks;
@@ -457,10 +459,7 @@
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -475,10 +474,7 @@
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
