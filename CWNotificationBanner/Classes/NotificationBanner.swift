@@ -124,7 +124,7 @@ public class NotificationBanner: UIView {
         sharedToolbar.messageLabel.text = message.text
         
         if let navController = activeNavigationController,
-            let navBar = navController.navigationBar as? NavigationBar {
+        let navBar = navController.navigationBar as? NavigationBar {
             navBar.extraView = sharedToolbar
             navController.navigationBar.insertSubview(sharedToolbar, atIndex: 0)
         }
@@ -137,7 +137,7 @@ public class NotificationBanner: UIView {
         
         currentMessage = message
         
-        UIView.animateWithDuration(animateDuration) {
+        UIView.animateWithDuration(animateDuration) { 
             sharedToolbar.frame = messageShownFrame
         }
         
@@ -155,7 +155,11 @@ public class NotificationBanner: UIView {
     }
     
     public static func showErrorMessage(messageType: MessageType, code: Int? = nil, duration: NSTimeInterval = Message.defaultDisplayTime) -> Message {
-        return showErrorMessage(messageType.rawValue, code: code, duration: duration)
+        if messageType == .Unspecified {
+            return showErrorMessage(messageType.rawValue, code: code, duration: duration)
+        } else {
+            return showErrorMessage(messageType.rawValue, code: nil, duration: duration)
+        }
     }
     
     public static func showErrorMessage(text: String, code: Int? = nil, duration: NSTimeInterval = Message.defaultDisplayTime) -> Message {
@@ -196,13 +200,13 @@ public class NotificationBanner: UIView {
         hideCurrentMessage(animated)
         pendingMessages = []
     }
-    
+
     private static var keyWindow: UIWindow {
         return UIApplication.sharedApplication().keyWindow!
     }
     private static var activeNavigationController: UINavigationController? {
         let rootVC = keyWindow.rootViewController!
-        
+            
         if let navController = rootVC as? UINavigationController {
             return navController
         }
@@ -234,7 +238,7 @@ public class NotificationBanner: UIView {
     @IBOutlet private weak var messageLabel: UILabel!
     @IBOutlet weak var messageButton: UIButton!
     @IBOutlet weak var closeButton: UIButton!
-    private var underStatusBarView: UIView!
+    private var underStatusBarView: UIView?
     
     public static var sharedToolbar: NotificationBanner = {
         
@@ -301,7 +305,7 @@ public class NotificationBanner: UIView {
         currentMessageTimer = nil
         currentMessage = nil
     }
-    
+
     @IBAction @objc private func messageLabelTapped(sender: UIButton) {
         if let key = NotificationBanner.currentMessage?.actionKey,
             let action = Message.actions[key] {
@@ -314,12 +318,6 @@ public class NotificationBanner: UIView {
             if let next = NotificationBanner.pendingMessages.last {
                 NotificationBanner.showMessage(next)
             }
-        }
-    }
-    
-    public var barTintColor: UIColor? {
-        didSet {
-            underStatusBarView?.backgroundColor = barTintColor?.colorWithAlphaComponent(0.85)
         }
     }
     
