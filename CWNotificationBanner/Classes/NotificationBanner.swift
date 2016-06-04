@@ -47,9 +47,9 @@ public struct Message: Equatable {
         self.actionKey = actionKey
         self.isError = error
     }
-    
+
     public init?(pushPayload: [NSObject : AnyObject]) {
-        
+
         guard let text = pushPayload[PushPayloadKey.aps.rawValue]?[PushPayloadKey.alert.rawValue] as? String else { return nil }
         
         self.text = text
@@ -68,11 +68,11 @@ public struct Message: Equatable {
             actions[key] = action
         }
     }
-    
+
     public static func unregisterActionForKey(key: String) {
         actions.removeValueForKey(key)
     }
-    
+
     public func isEqual(other: AnyObject?) -> Bool {
         guard let o = other as? Message else { return false }
         return o.text == text && o.date == date
@@ -93,7 +93,7 @@ public class NotificationBanner: UIView {
     }
     
     public static func showMessage(message: Message) {
-        
+
         guard NSThread.mainThread() == NSThread.currentThread() else {
             NSOperationQueue.mainQueue().addOperationWithBlock {
                 showMessage(message)
@@ -118,7 +118,7 @@ public class NotificationBanner: UIView {
         if !pendingMessages.contains(message) {
             pendingMessages.append(message)
         }
-        
+
         sharedToolbar.styleForError(message.isError)
         sharedToolbar.frame = messageHiddenFrame
         sharedToolbar.messageLabel.text = message.text
@@ -144,10 +144,10 @@ public class NotificationBanner: UIView {
             sharedToolbar.frame = messageShownFrame
             sharedToolbar.alpha = 1
         }
-        
+
         currentMessageTimer?.invalidate()
         currentMessageTimer = NSTimer.after(message.duration) {
-            
+
             pendingMessages = pendingMessages.filter { $0 != message }
             
             hideCurrentMessage(true, fadeOpacity: translucentNavBar, alreadyRemoved: true) {
@@ -177,7 +177,7 @@ public class NotificationBanner: UIView {
         
         return message
     }
-    
+
     public static func cancelMessage(toCancel: Message, animated: Bool = true) {
         guard NSThread.mainThread() == NSThread.currentThread() else {
             NSOperationQueue.mainQueue().addOperationWithBlock {
@@ -185,14 +185,14 @@ public class NotificationBanner: UIView {
             }
             return
         }
-        
+
         if let current = currentMessage where toCancel == current {
             hideCurrentMessage(animated)
         } else {
             pendingMessages = pendingMessages.filter { $0 != toCancel }
         }
     }
-    
+
     public static func cancelAllMessages(animated: Bool) {
         guard NSThread.mainThread() == NSThread.currentThread() else {
             NSOperationQueue.mainQueue().addOperationWithBlock {
@@ -200,7 +200,7 @@ public class NotificationBanner: UIView {
             }
             return
         }
-        
+
         hideCurrentMessage(animated)
         pendingMessages = []
     }
@@ -264,7 +264,7 @@ public class NotificationBanner: UIView {
         
         return t
     }()
-    
+
     private static var currentMessageTimer: NSTimer?
     private static var currentMessage: Message?
     private static var pendingMessages = [Message]()
@@ -284,7 +284,7 @@ public class NotificationBanner: UIView {
     private class var messageHiddenFrame: CGRect {
         return CGRect(x: 0, y: -sharedToolbar.frame.height, width: UIScreen.mainScreen().bounds.width, height: sharedToolbar.frame.height)
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -294,7 +294,7 @@ public class NotificationBanner: UIView {
         if !alreadyRemoved && pendingMessages.count > 0 {
             pendingMessages.removeLast()
         }
-        
+
         if animated {
             UIView.animateWithDuration(animateDuration, animations: {
                 sharedToolbar.frame = messageHiddenFrame
@@ -309,7 +309,7 @@ public class NotificationBanner: UIView {
             sharedToolbar.frame = messageHiddenFrame
             completion?()
         }
-        
+
         currentMessageTimer?.invalidate()
         currentMessageTimer = nil
         currentMessage = nil
