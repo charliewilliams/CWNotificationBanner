@@ -31,9 +31,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'CWNotificationBanner/Classes/**/*'
-  #s.resource_bundles = {
-  #  'CWNotificationBanner' => ['CWNotificationBanner/Assets/*.png']
-  #}
+  s.resource_bundles = {
+    'CWNotificationBanner' => ['CWNotificationBanner/Assets/*.{png,xib}']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
