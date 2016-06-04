@@ -8,15 +8,25 @@ You want a nice iOS Push Notification UI to display popover banners? Here it is.
 
 import CWNotificationBanner
 
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    // MessageAction to register blocks by key to call when tapping a message banner
+    let tapAction:MessageAction = { Void in
+
+    let alert = UIAlertController(title: "Tapped the alert banner", message: "Popups are a terrible user experience, eh?", preferredStyle: .Alert)
+    self.showViewController(alert, sender: nil)
+    }
+
+    Message.registerAction(tapAction, forKey: "tapAction")
+}
+
 override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
 
-    let message = Message(text: "You have an alert")
-    NotificationBanner.showMessage(message)
+    let message = Message(text: "Hello there")
 
-    let message = Message("You have an alert", displayDuration: 2)
     NotificationBanner.showMessage(message)
-
 }
 
 override func viewWillDisappear() {
