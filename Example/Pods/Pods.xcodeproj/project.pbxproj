@@ -344,7 +344,9 @@
 		BB90621A69C78E409DAE3B478A2E25C7 /* Nimble-Snapshots.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Nimble-Snapshots.modulemap"; sourceTree = "<group>"; };
 		BE61A8BF9B6E4B4F5541FBE117105978 /* BeGreaterThanOrEqualTo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeGreaterThanOrEqualTo.swift; path = Sources/Nimble/Matchers/BeGreaterThanOrEqualTo.swift; sourceTree = "<group>"; };
 		BEA53CC379D5A990DF5B337EDEB3AB8F /* Pods-CWNotificationBanner_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CWNotificationBanner_Example-frameworks.sh"; sourceTree = "<group>"; };
-		C0B74BA71D02B7AA00107D6E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C0B74BAC1D02BC5E00107D6E /* close-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-icon.png"; sourceTree = "<group>"; };
+		C0B74BAD1D02BC5E00107D6E /* close-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-icon@2x.png"; sourceTree = "<group>"; };
+		C0B74BAE1D02BC5E00107D6E /* close-icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "close-icon@3x.png"; sourceTree = "<group>"; };
 		C0F4E44123574EB4ABA127ED9E685064 /* Pods-CWNotificationBanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CWNotificationBanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C375530C7888AD82E28E2D1EEDA2EED2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3FC15A900557CD756F7886821BFC461 /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Quick.modulemap; sourceTree = "<group>"; };
@@ -534,7 +536,7 @@
 			isa = PBXGroup;
 			children = (
 				00E2B55C8CC3AA67241C60BC5108036B /* Classes */,
-				C0B74BA71D02B7AA00107D6E /* Images.xcassets */,
+				C0B74BAB1D02BC5E00107D6E /* Assets */,
 			);
 			path = CWNotificationBanner;
 			sourceTree = "<group>";
@@ -746,6 +748,16 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Nimble-Snapshots";
+			sourceTree = "<group>";
+		};
+		C0B74BAB1D02BC5E00107D6E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C0B74BAC1D02BC5E00107D6E /* close-icon.png */,
+				C0B74BAD1D02BC5E00107D6E /* close-icon@2x.png */,
+				C0B74BAE1D02BC5E00107D6E /* close-icon@3x.png */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 		C0C51AAFC3C06D4FEFAC776165780D23 /* Targets Support Files */ = {
