@@ -7,14 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		24F12C2ACA3478C8D2AD3551 /* Pods_CWNotificationBanner_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65E38D9D886426DE782617C /* Pods_CWNotificationBanner_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		F2AF83B1DA4B85B2325E14CC /* Pods_CWNotificationBanner_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089BBE9FC7CD5BF3A75B97C5 /* Pods_CWNotificationBanner_Example.framework */; };
+		C0F4FF4F1D02B5AE00387C01 /* CWNotificationBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0F4FF4E1D02B5AE00387C01 /* CWNotificationBanner.framework */; };
+		D942A5896084413D5B2BBD5B /* Pods_CWNotificationBanner_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23E2B21D75191CE7A041A77D /* Pods_CWNotificationBanner_Tests.framework */; };
+		E5012CF8DEC887E777F23FEB /* Pods_CWNotificationBanner_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2387A612FD8880CA3040F0E /* Pods_CWNotificationBanner_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,10 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		089BBE9FC7CD5BF3A75B97C5 /* Pods_CWNotificationBanner_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWNotificationBanner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		24CAE0013EE4FACA7D5B8476 /* Pods-CWNotificationBanner_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		2A791F550FE874660BD2B116 /* Pods-CWNotificationBanner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5687E6E3A649CF54FF5A89E4 /* Pods-CWNotificationBanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		09D94CB43484F554FB7045A7 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		23E2B21D75191CE7A041A77D /* Pods_CWNotificationBanner_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWNotificationBanner_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C30F52455DFAC70AFA236A0 /* Pods-CWNotificationBanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		4C7BCCF156BFD9AD68BBF546 /* Pods-CWNotificationBanner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CWNotificationBanner_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CWNotificationBanner_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,9 +45,10 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		70DBFFDF66297AA0A69308A6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		724DB033A831034C33BC561A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A2387A612FD8880CA3040F0E /* Pods_CWNotificationBanner_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWNotificationBanner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD377AB750EB37B800A38399 /* CWNotificationBanner.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CWNotificationBanner.podspec; path = ../CWNotificationBanner.podspec; sourceTree = "<group>"; };
-		D65E38D9D886426DE782617C /* Pods_CWNotificationBanner_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWNotificationBanner_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBDF5725417EA57CA4649F19 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0F4FF4E1D02B5AE00387C01 /* CWNotificationBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CWNotificationBanner.framework; path = "../../../Library/Developer/Xcode/DerivedData/CWNotificationBanner-bvkbdapghvnuytgdwjgpysloevhb/Build/Products/Debug-iphonesimulator/CWNotificationBanner/CWNotificationBanner.framework"; sourceTree = "<group>"; };
+		FB03341164633B365D8751F4 /* Pods-CWNotificationBanner_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2AF83B1DA4B85B2325E14CC /* Pods_CWNotificationBanner_Example.framework in Frameworks */,
+				C0F4FF4F1D02B5AE00387C01 /* CWNotificationBanner.framework in Frameworks */,
+				E5012CF8DEC887E777F23FEB /* Pods_CWNotificationBanner_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,13 +65,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24F12C2ACA3478C8D2AD3551 /* Pods_CWNotificationBanner_Tests.framework in Frameworks */,
+				D942A5896084413D5B2BBD5B /* Pods_CWNotificationBanner_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0533D11364177F1BB6A2189F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C30F52455DFAC70AFA236A0 /* Pods-CWNotificationBanner_Example.debug.xcconfig */,
+				4C7BCCF156BFD9AD68BBF546 /* Pods-CWNotificationBanner_Example.release.xcconfig */,
+				09D94CB43484F554FB7045A7 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */,
+				FB03341164633B365D8751F4 /* Pods-CWNotificationBanner_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -76,8 +90,8 @@
 				607FACD21AFB9204008FA782 /* Example for CWNotificationBanner */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				FEEAD1C66872BFBD3B2B8A91 /* Pods */,
 				7B2827DEAD64F6924CEEA477 /* Frameworks */,
+				0533D11364177F1BB6A2189F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,21 +156,11 @@
 		7B2827DEAD64F6924CEEA477 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				089BBE9FC7CD5BF3A75B97C5 /* Pods_CWNotificationBanner_Example.framework */,
-				D65E38D9D886426DE782617C /* Pods_CWNotificationBanner_Tests.framework */,
+				C0F4FF4E1D02B5AE00387C01 /* CWNotificationBanner.framework */,
+				A2387A612FD8880CA3040F0E /* Pods_CWNotificationBanner_Example.framework */,
+				23E2B21D75191CE7A041A77D /* Pods_CWNotificationBanner_Tests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FEEAD1C66872BFBD3B2B8A91 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5687E6E3A649CF54FF5A89E4 /* Pods-CWNotificationBanner_Example.debug.xcconfig */,
-				2A791F550FE874660BD2B116 /* Pods-CWNotificationBanner_Example.release.xcconfig */,
-				EBDF5725417EA57CA4649F19 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */,
-				24CAE0013EE4FACA7D5B8476 /* Pods-CWNotificationBanner_Tests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,7 +490,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5687E6E3A649CF54FF5A89E4 /* Pods-CWNotificationBanner_Example.debug.xcconfig */;
+			baseConfigurationReference = 2C30F52455DFAC70AFA236A0 /* Pods-CWNotificationBanner_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CWNotificationBanner/Info.plist;
@@ -499,7 +503,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A791F550FE874660BD2B116 /* Pods-CWNotificationBanner_Example.release.xcconfig */;
+			baseConfigurationReference = 4C7BCCF156BFD9AD68BBF546 /* Pods-CWNotificationBanner_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CWNotificationBanner/Info.plist;
@@ -512,7 +516,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EBDF5725417EA57CA4649F19 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */;
+			baseConfigurationReference = 09D94CB43484F554FB7045A7 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -531,7 +535,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 24CAE0013EE4FACA7D5B8476 /* Pods-CWNotificationBanner_Tests.release.xcconfig */;
+			baseConfigurationReference = FB03341164633B365D8751F4 /* Pods-CWNotificationBanner_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
