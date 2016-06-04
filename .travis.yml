@@ -3,12 +3,12 @@
 # * https://github.com/supermarin/xcpretty#usage
 
 language: objective-c
-cache: cocoapods
+#cache: cocoapods
 podfile: Example/Podfile
 before_install:
- - rvm install ruby-2.2.2
+ - rvm install ruby-2.2.2 #cocoapods 1.0.0 requirement not yet supported ootb by travis
  - gem install cocoapods # Since Travis is not always on latest version
- - pod install #--project-directory=Example
+ - pod install --project-directory=Example
 script:
 - set -o pipefail && xctool test -workspace Example/CWNotificationBanner.xcworkspace -scheme CWNotificationBanner-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
 - pod lib lint
