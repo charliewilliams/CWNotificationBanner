@@ -41,7 +41,8 @@ override func viewWillDisappear() {
 CWNotificationBanner is a Swift 2.0 re-interpretation of AGPushNote (https://github.com/avielg/AGPushNote).
 
 Future improvements:
-- Implement actions for when you tap a message (This is hindered somewhat by the rigorous #selector checks in Swift)
+- Improve documentation
+- Improve example app
 - Implement customizations for the banner display
 
 
