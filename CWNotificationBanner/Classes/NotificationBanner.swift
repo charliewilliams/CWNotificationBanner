@@ -82,7 +82,7 @@ public struct Message: Equatable {
 public class NotificationBanner: UIView {
     
     public static var animateDuration: NSTimeInterval = 0.3
-    public static var fallbackToBannerOnMainWindow: Bool = false
+    public static var fallbackToBannerOnMainWindow: Bool = true
     public var errorBackgroundColor = UIColor(white: 0.2, alpha: 1.0)
     public var regularBackgroundColor = UIColor.greenColor()
     
