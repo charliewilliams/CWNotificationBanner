@@ -8,6 +8,7 @@ podfile: Example/Podfile
 before_install:
  - rvm install ruby-2.2.2 #cocoapods 1.0.0 requirement not yet supported ootb by travis
  - gem install cocoapods # Since Travis is not always on latest version
+ - gem install xcpretty
  # - pod repo update
  - pod install --project-directory=Example
 script:
