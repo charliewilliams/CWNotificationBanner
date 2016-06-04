@@ -113,7 +113,6 @@
 		BBE10615F3CD16FAF02BBD3D42B6D246 /* World+DSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B997D5595D59A938C9987C7755EBEA3 /* World+DSL.swift */; };
 		BD6302ECE07C5DD92C9826E7E6C9DBA9 /* Quick-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 343C7BF4ADC7B0043CC9B2743607D0A5 /* Quick-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C033C346AC287D2009457C31E85587D1 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 137151B26C74FEF07D2A20428DB62F9F /* Quick.framework */; };
-		C060B12C1D02E5FD00768DB6 /* SwiftyTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F175224662F45597C13480E10AAD139C /* SwiftyTimer.swift */; };
 		C12E0930E021F1894B60BC6AFA8F2409 /* AdapterProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59E14C1B5AD8267A0C8A02C632F98D6 /* AdapterProtocols.swift */; };
 		C360952381641F725C15758993A0F665 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = ACD58AF0E7F50616E357EABDC010CF70 /* UIImage+Diff.m */; };
 		C694D89B711A47F15BBB2665D0330E5E /* SwiftyTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA587489208300A40E052F57FD32D06 /* SwiftyTimer-dummy.m */; };
@@ -1141,7 +1140,6 @@
 				2F9D90E380365634A00E8C2D8158FFF1 /* NavigationBar.swift in Sources */,
 				333D7C04897A4DEF6E2069F258F59B0C /* NotificationBanner.swift in Sources */,
 				D082E258E675B33BA062B195B7989F6B /* NotificationBanner.xib in Sources */,
-				C060B12C1D02E5FD00768DB6 /* SwiftyTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
