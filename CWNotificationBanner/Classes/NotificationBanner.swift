@@ -84,7 +84,7 @@ public class NotificationBanner: UIView {
     public static var animateDuration: NSTimeInterval = 0.3
     public static var fallbackToBannerOnMainWindow: Bool = true
     public var errorBackgroundColor = UIColor(white: 0.2, alpha: 1.0)
-    public var regularBackgroundColor = UIColor.greenColor()
+    public var regularBackgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.2)
     
     override public var backgroundColor: UIColor! {
         didSet {
@@ -123,8 +123,11 @@ public class NotificationBanner: UIView {
         sharedToolbar.frame = messageHiddenFrame
         sharedToolbar.messageLabel.text = message.text
         
+        var translucentNavBar: Bool = false
+        
         if let navController = activeNavigationController,
         let navBar = navController.navigationBar as? NavigationBar {
+            translucentNavBar = navBar.translucent
             navBar.extraView = sharedToolbar
             navController.navigationBar.insertSubview(sharedToolbar, atIndex: 0)
         }
@@ -137,8 +140,9 @@ public class NotificationBanner: UIView {
         
         currentMessage = message
         
-        UIView.animateWithDuration(animateDuration) { 
+        UIView.animateWithDuration(animateDuration) {
             sharedToolbar.frame = messageShownFrame
+            sharedToolbar.alpha = 1
         }
         
         currentMessageTimer?.invalidate()
@@ -146,7 +150,7 @@ public class NotificationBanner: UIView {
             
             pendingMessages = pendingMessages.filter { $0 != message }
             
-            hideCurrentMessage(true, alreadyRemoved: true) {
+            hideCurrentMessage(true, fadeOpacity: translucentNavBar, alreadyRemoved: true) {
                 if let next = pendingMessages.last {
                     showMessage(next)
                 }
@@ -285,7 +289,7 @@ public class NotificationBanner: UIView {
         super.init(coder: aDecoder)
     }
     
-    private static func hideCurrentMessage(animated: Bool, alreadyRemoved: Bool = false, completion: (()->())? = nil) {
+    private static func hideCurrentMessage(animated: Bool, fadeOpacity: Bool = false, alreadyRemoved: Bool = false, completion: (()->())? = nil) {
         
         if !alreadyRemoved && pendingMessages.count > 0 {
             pendingMessages.removeLast()
@@ -294,7 +298,11 @@ public class NotificationBanner: UIView {
         if animated {
             UIView.animateWithDuration(animateDuration, animations: {
                 sharedToolbar.frame = messageHiddenFrame
+                if fadeOpacity {
+                    sharedToolbar.alpha = 0
+                }
                 }, completion: { finished in
+                    sharedToolbar.alpha = 0
                     completion?()
             })
         } else {
