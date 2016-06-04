@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "CWNotificationBanner"
-  s.version          = "0.1.2"
+  s.version          = "0.2.0"
   s.summary          = "You want a nice iOS Push Notification UI to display popover banners? Here it is."
 
 # This description is used to generate tags and improve search results.
@@ -31,9 +31,9 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'CWNotificationBanner/Classes/**/*'
-  s.resource_bundles = {
-    'CWNotificationBanner' => ['CWNotificationBanner/Assets/*.png']
-  }
+    #s.resource_bundles = {
+    #    'CWNotificationBanner' => ['CWNotificationBanner/Assets/*.png']
+    #  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit'

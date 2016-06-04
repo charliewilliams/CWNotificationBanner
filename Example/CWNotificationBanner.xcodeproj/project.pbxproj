@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24F12C2ACA3478C8D2AD3551 /* Pods_CWNotificationBanner_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65E38D9D886426DE782617C /* Pods_CWNotificationBanner_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		F2AF83B1DA4B85B2325E14CC /* Pods_CWNotificationBanner_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089BBE9FC7CD5BF3A75B97C5 /* Pods_CWNotificationBanner_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,8 +28,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		183F4BEC445B4A6521DD4D0A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		52B5B09F83635D4BFBE23575 /* CWNotificationBanner.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CWNotificationBanner.podspec; path = ../CWNotificationBanner.podspec; sourceTree = "<group>"; };
+		089BBE9FC7CD5BF3A75B97C5 /* Pods_CWNotificationBanner_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWNotificationBanner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24CAE0013EE4FACA7D5B8476 /* Pods-CWNotificationBanner_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2A791F550FE874660BD2B116 /* Pods-CWNotificationBanner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.release.xcconfig"; sourceTree = "<group>"; };
+		5687E6E3A649CF54FF5A89E4 /* Pods-CWNotificationBanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* CWNotificationBanner_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CWNotificationBanner_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,11 +42,11 @@
 		607FACE51AFB9204008FA782 /* CWNotificationBanner_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CWNotificationBanner_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		6DFAECC2B80F5F69E010611C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		C023AB8F1D02080100E40782 /* CWNotificationBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CWNotificationBanner.framework; path = "../../../Library/Developer/Xcode/DerivedData/CWNotificationBanner-bvkbdapghvnuytgdwjgpysloevhb/Build/Products/Debug-iphonesimulator/CWNotificationBanner/CWNotificationBanner.framework"; sourceTree = "<group>"; };
-		EF9D00D4ED63B55FF900B1ED /* Pods-CWNotificationBanner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F2A387C95636EF0FC5F3AE71 /* Pods-CWNotificationBanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		FF2F428BDA961144EC15D44D /* Pods_CWNotificationBanner_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWNotificationBanner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70DBFFDF66297AA0A69308A6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		724DB033A831034C33BC561A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BD377AB750EB37B800A38399 /* CWNotificationBanner.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CWNotificationBanner.podspec; path = ../CWNotificationBanner.podspec; sourceTree = "<group>"; };
+		D65E38D9D886426DE782617C /* Pods_CWNotificationBanner_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CWNotificationBanner_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBDF5725417EA57CA4649F19 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CWNotificationBanner_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2AF83B1DA4B85B2325E14CC /* Pods_CWNotificationBanner_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24F12C2ACA3478C8D2AD3551 /* Pods_CWNotificationBanner_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +72,12 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				607FACF51AFB993E008FA782 /* Podspec */,
-				607FACD21AFB9204008FA782 /* Demo App */,
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD21AFB9204008FA782 /* Example for CWNotificationBanner */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
-				D40A9017A2F4225D8939FAC9 /* Pods */,
-				9E5A7FFAA89A32585CF214FE /* Frameworks */,
+				FEEAD1C66872BFBD3B2B8A91 /* Pods */,
+				7B2827DEAD64F6924CEEA477 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,7 +90,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Demo App */ = {
+		607FACD21AFB9204008FA782 /* Example for CWNotificationBanner */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -94,7 +100,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Demo App";
+			name = "Example for CWNotificationBanner";
 			path = CWNotificationBanner;
 			sourceTree = "<group>";
 		};
@@ -123,30 +129,32 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		607FACF51AFB993E008FA782 /* Podspec */ = {
+		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
-				52B5B09F83635D4BFBE23575 /* CWNotificationBanner.podspec */,
-				183F4BEC445B4A6521DD4D0A /* README.md */,
-				6DFAECC2B80F5F69E010611C /* LICENSE */,
+				BD377AB750EB37B800A38399 /* CWNotificationBanner.podspec */,
+				724DB033A831034C33BC561A /* README.md */,
+				70DBFFDF66297AA0A69308A6 /* LICENSE */,
 			);
-			name = Podspec;
+			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		9E5A7FFAA89A32585CF214FE /* Frameworks */ = {
+		7B2827DEAD64F6924CEEA477 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C023AB8F1D02080100E40782 /* CWNotificationBanner.framework */,
-				FF2F428BDA961144EC15D44D /* Pods_CWNotificationBanner_Example.framework */,
+				089BBE9FC7CD5BF3A75B97C5 /* Pods_CWNotificationBanner_Example.framework */,
+				D65E38D9D886426DE782617C /* Pods_CWNotificationBanner_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D40A9017A2F4225D8939FAC9 /* Pods */ = {
+		FEEAD1C66872BFBD3B2B8A91 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F2A387C95636EF0FC5F3AE71 /* Pods-CWNotificationBanner_Example.debug.xcconfig */,
-				EF9D00D4ED63B55FF900B1ED /* Pods-CWNotificationBanner_Example.release.xcconfig */,
+				5687E6E3A649CF54FF5A89E4 /* Pods-CWNotificationBanner_Example.debug.xcconfig */,
+				2A791F550FE874660BD2B116 /* Pods-CWNotificationBanner_Example.release.xcconfig */,
+				EBDF5725417EA57CA4649F19 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */,
+				24CAE0013EE4FACA7D5B8476 /* Pods-CWNotificationBanner_Tests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -158,12 +166,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CWNotificationBanner_Example" */;
 			buildPhases = (
-				A183AEA75831114C5160A48E /* [CP] Check Pods Manifest.lock */,
+				48E5336AA5D455DF8E4CBF39 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				D13FC911CC8075106ED3E3FF /* [CP] Embed Pods Frameworks */,
-				8270212E54ADBA8D485F23DC /* [CP] Copy Pods Resources */,
+				406048D9D6E9C30D85D05091 /* [CP] Embed Pods Frameworks */,
+				6AC1FB1F0BE6C71B1E3BB3AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -178,9 +186,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "CWNotificationBanner_Tests" */;
 			buildPhases = (
+				559C48EE19CACDE578E7BAB0 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
+				7CDD3D9622980619FD6D34ED /* [CP] Embed Pods Frameworks */,
+				00F5CCCD742BE26A03FC8881 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -251,7 +262,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8270212E54ADBA8D485F23DC /* [CP] Copy Pods Resources */ = {
+		00F5CCCD742BE26A03FC8881 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,10 +274,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A183AEA75831114C5160A48E /* [CP] Check Pods Manifest.lock */ = {
+		406048D9D6E9C30D85D05091 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48E5336AA5D455DF8E4CBF39 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -281,7 +307,37 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D13FC911CC8075106ED3E3FF /* [CP] Embed Pods Frameworks */ = {
+		559C48EE19CACDE578E7BAB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC1FB1F0BE6C71B1E3BB3AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CDD3D9622980619FD6D34ED /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -293,7 +349,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CWNotificationBanner_Example/Pods-CWNotificationBanner_Example-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CWNotificationBanner_Tests/Pods-CWNotificationBanner_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -366,7 +422,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DSTROOT = "";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -384,7 +439,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -412,7 +467,6 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DSTROOT = "";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -423,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -432,7 +486,7 @@
 		};
 		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2A387C95636EF0FC5F3AE71 /* Pods-CWNotificationBanner_Example.debug.xcconfig */;
+			baseConfigurationReference = 5687E6E3A649CF54FF5A89E4 /* Pods-CWNotificationBanner_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CWNotificationBanner/Info.plist;
@@ -445,7 +499,7 @@
 		};
 		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF9D00D4ED63B55FF900B1ED /* Pods-CWNotificationBanner_Example.release.xcconfig */;
+			baseConfigurationReference = 2A791F550FE874660BD2B116 /* Pods-CWNotificationBanner_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CWNotificationBanner/Info.plist;
@@ -458,8 +512,12 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBDF5725417EA57CA4649F19 /* Pods-CWNotificationBanner_Tests.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -473,8 +531,12 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24CAE0013EE4FACA7D5B8476 /* Pods-CWNotificationBanner_Tests.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
