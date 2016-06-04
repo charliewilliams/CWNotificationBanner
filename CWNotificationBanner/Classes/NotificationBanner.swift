@@ -37,16 +37,16 @@ public struct Message : Equatable {
     private let isError: Bool
     private static let defaultDisplayTime: NSTimeInterval = 5
     private static var actions = [String:Action]()
-    
+
     public init(text: String, displayDuration: NSTimeInterval = defaultDisplayTime, isError error: Bool = false) {
         self.text = text
         self.date = NSDate()
         self.duration = displayDuration
         self.isError = error
     }
-    
+
     public init?(pushPayload: [NSObject : AnyObject]) {
-        
+
         guard let text = pushPayload[PushPayloadKey.aps.rawValue]?[PushPayloadKey.alert.rawValue] as? String else { return nil }
         self.text = text
         self.actionKey = pushPayload[PushPayloadKey.action.rawValue] as? String
@@ -54,21 +54,21 @@ public struct Message : Equatable {
         self.date = NSDate()
         self.isError = false
     }
-    
+
     public static func registerAction(action: Action, forKey key: String) {
         actions[key] = action
     }
-    
+
     public static func registerActionsAndKeys(actionsAndKeys:[String:Action]) {
         for (key, action) in actionsAndKeys {
             actions[key] = action
         }
     }
-    
+
     public static func unregisterActionForKey(key: String) {
         actions.removeValueForKey(key)
     }
-    
+
     public func isEqual(other: AnyObject?) -> Bool {
         guard let o = other as? Message else { return false }
         return o.text == text && o.date == date
@@ -78,44 +78,44 @@ public struct Message : Equatable {
 public class NotificationBanner: UIToolbar {
 
     public static func showMessage(message: Message) {
-        
+
         guard NSThread.mainThread() == NSThread.currentThread() else {
             NSOperationQueue.mainQueue().addOperationWithBlock {
                 showMessage(message)
             }
             return
         }
-        
+
         if let timer = currentMessageTimer,
             let interruptedMessage = pendingMessages.last where timer.valid {
             let index = pendingMessages.count >= 2 ? pendingMessages.count - 2 : 0
             pendingMessages.insert(interruptedMessage, atIndex: index)
         }
-        
+
         // Don't interrupt an error to show a non-error
         if let currentMessage = pendingMessages.last where currentMessage.isError {
             let index = pendingMessages.count >= 2 ? pendingMessages.count - 2 : 0
             pendingMessages.insert(message, atIndex: index)
             return
         }
-        
+
         if !pendingMessages.contains(message) {
             pendingMessages.append(message)
         }
-        
+
         sharedToolbar.styleForError(message.isError)
         sharedToolbar.frame = messageHiddenFrame
         sharedToolbar.messageLabel.text = message.text
-        
-        UIView.animateWithDuration(animateDuration) { 
+
+        UIView.animateWithDuration(animateDuration) {
             sharedToolbar.frame = messageShownFrame
         }
-        
+
         currentMessageTimer?.invalidate()
         currentMessageTimer = NSTimer.after(message.duration) {
-            
+
             pendingMessages = pendingMessages.filter { $0 != message }
-            
+
             hideCurrentMessage(true, alreadyRemoved: true) {
                 if let next = pendingMessages.last {
                     showMessage(next)
@@ -123,9 +123,9 @@ public class NotificationBanner: UIToolbar {
             }
         }
     }
-    
+
     public static func showErrorMessage(messageType: MessageType, code: Int? = nil) {
-        
+
         var text = messageType.rawValue
         if let code = code where code != 0 {
             text = String(text.characters.dropLast()) + ": \(code)"
@@ -133,7 +133,7 @@ public class NotificationBanner: UIToolbar {
         let message = Message(text: text, isError: true)
         showMessage(message)
     }
-    
+
     public static func cancelMessage(toCancel: Message, animated: Bool = true) {
         guard NSThread.mainThread() == NSThread.currentThread() else {
             NSOperationQueue.mainQueue().addOperationWithBlock {
@@ -141,14 +141,14 @@ public class NotificationBanner: UIToolbar {
             }
             return
         }
-        
+
         if let current = currentMessage where toCancel == current {
             hideCurrentMessage(animated)
         } else {
             pendingMessages = pendingMessages.filter { $0 != toCancel }
         }
     }
-    
+
     public static func cancelAllMessages(animated: Bool) {
         guard NSThread.mainThread() == NSThread.currentThread() else {
             NSOperationQueue.mainQueue().addOperationWithBlock {
@@ -156,7 +156,7 @@ public class NotificationBanner: UIToolbar {
             }
             return
         }
-        
+
         hideCurrentMessage(animated)
         pendingMessages = []
     }
@@ -167,16 +167,16 @@ public class NotificationBanner: UIToolbar {
         let bundle = NSBundle(forClass: NotificationBanner.classForCoder())
         let t = bundle.loadNibNamed(String(NotificationBanner), owner: nil, options: nil).first as! NotificationBanner
         t.hideHairlineBorder()
-        t.barTintColor = UIColor(white: 0.2, alpha: 0.4)
         t.addStatusBarBackingView()
+        t.barTintColor = UIColor(white: 0.2, alpha: 0.4)
         UIApplication.sharedApplication().keyWindow?.addSubview(t)
         return t
     }()
-    
+
     private static var currentMessageTimer: NSTimer?
     private static var currentMessage: Message?
     private static var pendingMessages = [Message]()
-    
+
     private static let animateDuration: NSTimeInterval = 0.3
     private class var messageShownFrame: CGRect {
         let y = UIApplication.sharedApplication().statusBarHidden ? 0 : UIApplication.sharedApplication().statusBarFrame.height
@@ -185,17 +185,17 @@ public class NotificationBanner: UIToolbar {
     private class var messageHiddenFrame: CGRect {
         return CGRect(x: 0, y: -sharedToolbar.frame.height, width: sharedToolbar.frame.width, height: sharedToolbar.frame.height)
     }
-    
+
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     private static func hideCurrentMessage(animated: Bool, alreadyRemoved: Bool = false, completion: (()->())? = nil) {
-        
+
         if !alreadyRemoved && pendingMessages.count > 0 {
             pendingMessages.removeLast()
         }
-        
+
         if animated {
             UIView.animateWithDuration(animateDuration, animations: {
                 sharedToolbar.frame = messageHiddenFrame
@@ -206,7 +206,7 @@ public class NotificationBanner: UIToolbar {
             sharedToolbar.frame = messageHiddenFrame
             completion?()
         }
-        
+
         currentMessageTimer?.invalidate()
         currentMessageTimer = nil
         currentMessage = nil
@@ -218,7 +218,7 @@ public class NotificationBanner: UIToolbar {
             action()
         }
     }
-    
+
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
         NotificationBanner.hideCurrentMessage(true) {
             if let next = NotificationBanner.pendingMessages.last {
@@ -226,7 +226,7 @@ public class NotificationBanner: UIToolbar {
             }
         }
     }
-    
+
     private let errorBackgroundColor = UIColor(white: 0.2, alpha: 1.0)
     private let regularBackgroundColor = UIColor(red: 51.0/255.0, green: 204.0/255.0, blue: 51.0/255.0, alpha: 1)
     override public var barTintColor: UIColor? {
@@ -234,12 +234,12 @@ public class NotificationBanner: UIToolbar {
             underStatusBarView?.backgroundColor = barTintColor?.colorWithAlphaComponent(0.85)
         }
     }
-    
+
     private func styleForError(isError: Bool) {
         barTintColor = isError ? errorBackgroundColor : regularBackgroundColor
         messageLabel.textColor = .whiteColor()
     }
-    
+
     private func hideHairlineBorder() {
         for view in subviews {
             if let imageView = view as? UIImageView {
@@ -247,7 +247,7 @@ public class NotificationBanner: UIToolbar {
             }
         }
     }
-    
+
     private func addStatusBarBackingView() {
         let underStatusBar = UIView(frame: CGRectZero)
         underStatusBar.backgroundColor = UIColor(white: 0.2, alpha: 0.85)
