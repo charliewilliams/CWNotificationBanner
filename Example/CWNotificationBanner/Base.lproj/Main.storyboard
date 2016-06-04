@@ -48,7 +48,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hxj-Nz-Upm" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d21-EC-baX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="d21-EC-baX" customClass="NavigationBar" customModule="CWNotificationBanner">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
