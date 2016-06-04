@@ -4,7 +4,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'CWNotificationBanner_Example' do
-  pod 'SwiftyTimer', '~> 1.4'
+  pod 'SwiftyTimer', '~> 1.4', :path => 'https://github.com/radex/SwiftyTimer.git'
   pod 'CWNotificationBanner', :path => '../'
 
   target 'CWNotificationBanner_Tests' do
