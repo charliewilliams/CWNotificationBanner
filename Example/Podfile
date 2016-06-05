@@ -4,15 +4,15 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'CWNotificationBanner_Example' do
-  #pod 'SwiftyTimer', '~> 1.4'
+  pod 'SwiftyTimer', '~> 1.4'
   pod 'CWNotificationBanner', :path => '../'
 
   target 'CWNotificationBanner_Tests' do
     inherit! :search_paths
 
-    #pod 'Quick', '~> 0.8'
-    #pod 'Nimble', '~> 3.0'
-    #pod 'FBSnapshotTestCase'
-    #pod 'Nimble-Snapshots'
+    pod 'Quick', '~> 0.8'
+    pod 'Nimble', '~> 3.0'
+    pod 'FBSnapshotTestCase'
+    pod 'Nimble-Snapshots'
   end
 end
