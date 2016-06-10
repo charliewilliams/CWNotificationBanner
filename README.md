@@ -46,7 +46,7 @@ Future improvements: (pull requests welcome!)
 - Implement customizations for the banner display
 
 
-[![CI Status](http://img.shields.io/travis/charliesilliams/CWNotificationBanner.svg?style=flat)](https://travis-ci.org/charliewilliams/CWNotificationBanner)
+[![CI Status](http://img.shields.io/travis/charliewilliams/CWNotificationBanner.svg?style=flat)](https://travis-ci.org/charliewilliams/CWNotificationBanner)
 [![Version](https://img.shields.io/cocoapods/v/CWNotificationBanner.svg?style=flat)](http://cocoapods.org/pods/CWNotificationBanner)
 [![License](https://img.shields.io/cocoapods/l/CWNotificationBanner.svg?style=flat)](http://cocoapods.org/pods/CWNotificationBanner)
 [![Platform](https://img.shields.io/cocoapods/p/CWNotificationBanner.svg?style=flat)](http://cocoapods.org/pods/CWNotificationBanner)
