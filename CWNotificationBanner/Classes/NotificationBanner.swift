@@ -83,8 +83,8 @@ public class NotificationBanner: UIView {
     
     public static var animateDuration: NSTimeInterval = 0.3
     public static var fallbackToBannerOnMainWindow: Bool = true
-    public var errorBackgroundColor = UIColor(white: 0.2, alpha: 1.0)
-    public var regularBackgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.2)
+    public static var errorBackgroundColor = UIColor(white: 0.2, alpha: 1.0)
+    public static var regularBackgroundColor = UIColor.purpleColor().colorWithAlphaComponent(0.2)
     
     override public var backgroundColor: UIColor! {
         didSet {
@@ -244,7 +244,7 @@ public class NotificationBanner: UIView {
     @IBOutlet weak var closeButton: UIButton!
     private var underStatusBarView: UIView?
     
-    public static var sharedToolbar: NotificationBanner = {
+    private static var sharedToolbar: NotificationBanner = {
         
         let b = NSBundle(forClass: NotificationBanner.classForCoder())
         let t = b.loadNibNamed(String(NotificationBanner), owner: nil, options: nil).first as! NotificationBanner
@@ -331,7 +331,7 @@ public class NotificationBanner: UIView {
     }
     
     private func styleForError(isError: Bool) {
-        backgroundColor = isError ? errorBackgroundColor : regularBackgroundColor
+        backgroundColor = isError ? NotificationBanner.errorBackgroundColor : NotificationBanner.regularBackgroundColor
         messageLabel.textColor = .whiteColor()
     }
     
