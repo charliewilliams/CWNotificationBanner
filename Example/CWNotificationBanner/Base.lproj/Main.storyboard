@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sme-Ef-jjL">
-                                <rect key="frame" x="0.0" y="419" width="600" height="60"/>
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
                                 <color key="backgroundColor" red="0.050980392159999999" green="0.46274509800000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="B7n-Ah-atv"/>
@@ -34,7 +34,7 @@
                         <constraints>
                             <constraint firstItem="sme-Ef-jjL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="RxJ-0R-2Jp"/>
                             <constraint firstAttribute="trailing" secondItem="sme-Ef-jjL" secondAttribute="trailing" id="ihQ-Jl-qhA"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sme-Ef-jjL" secondAttribute="bottom" constant="121" id="rjv-zm-ve9"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="sme-Ef-jjL" secondAttribute="bottom" id="rjv-zm-ve9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tjC-hK-Fzp"/>
