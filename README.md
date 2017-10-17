@@ -24,8 +24,8 @@ override func viewDidLoad() {
 override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
 
-    let message = Message(text: "Hello there")
-
+    let message = Message(text: "Hello World", displayDuration: 3, actionKey: "tapAction", isError: false)
+    
     NotificationBanner.showMessage(message)
 }
 
